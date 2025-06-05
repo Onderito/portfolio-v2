@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <div>
       <div className="lg:hidden ">
-        <nav className="inset-shadow-2xs rounded-lg fixed bottom-0 p-4 w-full ">
+        <nav className="inset-shadow-2xs rounded-lg fixed bottom-0 p-5 w-full ">
           <ul className="flex gap-4 items-center justify-evenly">
             {navIcons.map((icon, index) => (
               <li key={index}>
