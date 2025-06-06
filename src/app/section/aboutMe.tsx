@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutMe() {
   return (
-    <section>
+    <section className="">
       <h2 className="text-[26px]">About me</h2>
     </section>
   );
