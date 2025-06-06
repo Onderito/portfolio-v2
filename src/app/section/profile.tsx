@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function Profile() {
   return (
-    <div>
+    <div className="relative overflow-x-hidden">
       <Image
         src="/little-noise.svg"
         alt="Profile picture"
         width={300}
         height={152}
-        className="rounded-full absolute right-[-10%] top-[-2%]"
+        className="rounded-full absolute right-[-10%] top-[-2%] "
       />
       <section className="p-4 pt-20">
         <Image
@@ -20,17 +20,17 @@ export default function Profile() {
           className=""
         />
         <div>
-          <h1 className="font-crimson text-[30px] mt-4">
+          <h1 className="font-crimson text-[44px] mt-4">
             Hey, I'm Ulas Önder.
           </h1>
           <div className="relative">
-            <h2 className="font-crimson text-[30px]">
+            <h2 className="font-crimson text-[32px]">
               Developer fullstack &{" "}
               <span className="font-fredoka font-bold shadow-md p-2 text-[30px] rounded-2xl bg-gradient-to-r from-[#FFA585] to-[#FFEDA0] bg-clip-text text-transparent border-2 border-double border-[#FFEDA0]">
                 Ux/Ui
               </span>{" "}
               <Image
-                className="absolute top-[-30%] right-0"
+                className="absolute top-[-30%] right-[-4%]"
                 src={"/pin.svg"}
                 alt="Pin icon"
                 width={40}
