@@ -44,7 +44,7 @@ export default function Profile() {
             building.
           </p>
           <div className="mt-6 font-crimson text-[22px] flex gap-3">
-            <button className="text-white shadow-md inset-shadow-md bg-[#2F2F2F] rounded-lg p-3">
+            <button className="text-white shadow-md inset-shadow-md bg-[#2F2F2F] rounded-lg p-3 ">
               See my projects
             </button>
             <button className="text-[#0B66C2] shadow-xs inset-shadow-lg bg-[#0B66C2]/20 rounded-full p-3 ">
