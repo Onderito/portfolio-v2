@@ -4,6 +4,7 @@ import Profile from "./section/profile";
 import Stack from "./section/stack";
 import AboutMe from "./section/aboutMe";
 import MyExperiences from "./section/myExperiences";
+import MyProjects from "./section/myProjects";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Stack />
         <AboutMe />
         <MyExperiences />
+        <MyProjects />
       </main>
 
       {/* Navbar fixe en bas */}
