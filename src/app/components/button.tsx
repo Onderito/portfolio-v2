@@ -20,8 +20,8 @@ const GradientButton: React.FC<GradientButtonProps> = ({
 }) => {
   // Définir les tailles
   const sizeClasses = {
-    sm: "px-12 py-2 text-md",
-    md: "px-12 py-2 text-lg",
+    sm: "px-12 py-2 text-lg",
+    md: "px-12 py-2 text-xl",
     lg: "px-12 py-4 text-lg",
     xl: "px-12 py-5 text-xl",
   };

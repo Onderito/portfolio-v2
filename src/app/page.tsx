@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import Profile from "./section/profile";
 import Stack from "./section/stack";
 import AboutMe from "./section/aboutMe";
+import MyExperiences from "./section/myExperiences";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Profile />
         <Stack />
         <AboutMe />
+        <MyExperiences />
       </main>
 
       {/* Navbar fixe en bas */}
