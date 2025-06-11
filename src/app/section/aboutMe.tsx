@@ -4,9 +4,9 @@ import GradientButton from "../components/button";
 
 export default function AboutMe() {
   return (
-    <section className="p-4 mt-10">
-      <h2 className="text-[32px] font-crimson">About me</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+    <section className="p-4 mt-10 md:p-12">
+      <h2 className="text-[32px] font-crimson md:text-[48px]">About me</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 md:mt-12">
         <div className=" flex flex-col justify-center items-center gap-8 py-10 relative bg-[linear-gradient(to_bottom,_rgba(255,165,133,0.4)_0%,_rgba(255,165,133,0.3)_85%,_rgba(255,237,160,0.5)_110%)] shadow-sm rounded-xl p-6 mt-4">
           <Image src={"/brain.svg"} alt="Brain icon" width={120} height={210} />
           <p className="font-crimson italic text-[28px] text-center">
@@ -15,7 +15,7 @@ export default function AboutMe() {
           </p>
 
           <GradientButton
-            className="absolute top-[-10%] right-0 rotate-12"
+            className="absolute top-[-10%] right-0 -rotate-12 md:right-[50%]"
             text="Who am I ?"
             size="sm"
           />
@@ -38,7 +38,7 @@ export default function AboutMe() {
           </p>
           <GradientButton className="rotate-12" text="Copy Email" size="md" />
         </div>
-        <div className="bg-gradient-to-l from-[#FFA585]/80 from-0% to-[#FFEDA0]/80 to-100% shadow-sm rounded-xl py-12 ">
+        <div className="bg-gradient-to-l from-[#FFA585]/80 from-0% to-[#FFEDA0]/80 to-100% shadow-sm rounded-xl py-12 md:flex md:flex-col md:justify-center md:items-center ">
           <p className="font-crimson italic text-[28px] text-center">
             Great design starts <br /> with empathy.
           </p>

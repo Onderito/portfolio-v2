@@ -40,7 +40,7 @@ export default function Profile() {
               designer
             </h2>
           </div>
-          <p className="text-[16px] mt-2 text-neutral-700 max-w-md md:text-[20px]">
+          <p className="text-[16px] font-fredoka font-light mt-2 text-neutral-700 max-w-md md:max-w-2xl md:text-[24px]">
             I code like a dev and think like a designer. Always curious, always
             building.
           </p>
