@@ -44,9 +44,11 @@ export default function MyProjects() {
     },
   ];
   return (
-    <section className="p-4 md:p-12 mt-10  relative overflow-hidden">
-      <h2 className="text-[32px] md:text-[48px] font-crimson">My projects</h2>
-      <ul className="flex flex-col gap-8 mt-8">
+    <section className="mt-10 p-4 md:p-12 lg:p-16 relative overflow-hidden">
+      <h2 className="text-[32px] md:text-[48px] lg:text-[58px] font-crimson">
+        My projects
+      </h2>
+      <ul className="flex flex-col gap-8 mt-8 lg:max-w-4xl">
         {projects.map((project, index) => (
           <li
             className="shadow-sm rounded-xl font-crimson bg-white "
@@ -58,16 +60,16 @@ export default function MyProjects() {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto object-cover p-4 md:p-6"
+              className="w-full h-auto object-cover p-4 md:p-6 lg:p-8"
             />
-            <div className="flex flex-col p-4 md:p-6 pb-4">
-              <h3 className="font-fredoka text-[25px] md:text-[35px]">
+            <div className="flex flex-col p-4 md:p-6 lg:p-8 pb-4">
+              <h3 className="font-fredoka text-[25px] md:text-[35px] lg:text-[40px] ">
                 {project.name}
               </h3>
-              <p className="text-[#B5B5B5] text-[18px] font-fredoka md:text-[22px] italic">
+              <p className="text-[#B5B5B5] text-[18px] font-fredoka md:text-[22px] lg:text-[24px] italic">
                 {project.by}
               </p>
-              <p className="mt-5 text-[19px] md:text-[24px] font-fredoka font-light ">
+              <p className="mt-5 text-[19px] md:text-[24px] lg:text-[28px] font-fredoka font-light ">
                 {project.text}
               </p>
               <div className="flex gap-2 mt-6">
@@ -76,7 +78,7 @@ export default function MyProjects() {
                     backgroundColor: project.firstBgColor,
                     color: project.firstTextColor,
                   }}
-                  className="px-4 py-1 rounded-full text-[20px] md:text-[25px] font-fredoka font-semibold"
+                  className="px-4 py-1 rounded-full text-[20px] md:text-[25px] lg:text-[30px] font-fredoka font-semibold"
                 >
                   {project.firstTag}
                 </span>
@@ -85,12 +87,12 @@ export default function MyProjects() {
                     backgroundColor: project.secondBgColor,
                     color: project.secondTextColor,
                   }}
-                  className="px-3 py-1 rounded-full text-[20px] md:text-[25px] font-fredoka font-semibold"
+                  className="px-3 py-1 rounded-full text-[20px] md:text-[25px] lg:text-[30px] font-fredoka font-semibold"
                 >
                   {project.secondTag}
                 </span>
               </div>
-              <button className="mt-8 text-[22px] md:text-[26px] inset-shadow-sm inset-shadow-[#FFA585] font-medium font-fredoka py-2 rounded-xl">
+              <button className="mt-8 text-[22px] md:text-[26px] lg:text-[30px] inset-shadow-sm inset-shadow-[#FFA585] font-medium font-fredoka py-2 lg:py-4 rounded-xl">
                 See a project
               </button>
             </div>
