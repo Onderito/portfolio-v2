@@ -84,18 +84,11 @@ export default function AboutMe() {
             </span>
           </p>
           <Image
-            className="absolute bottom-0 right-0"
-            src={"/mail.svg"}
-            alt="Mail icon"
-            width={95}
-            height={95}
-          />
-          <Image
             className="absolute top-0 left-0"
-            src={"/phone.svg"}
-            alt="Phone icon"
-            width={95}
-            height={95}
+            src={"/puzzle.svg"}
+            alt="Puzzle icon"
+            width={200}
+            height={200}
           />
           <Image
             className="absolute top-5 right-5"
