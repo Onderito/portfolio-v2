@@ -20,10 +20,16 @@ export default function Stack() {
 
   return (
     <div className="overflow-hidden w-full bg-white py-4 mt-20">
-      <ul className="flex items-center animate-marquee gap-14 min-w-max ">
+      <ul className="flex justify-center items-center animate-marquee gap-14 xl:gap-28 min-w-max ">
         {stackIcons.map((icon, index) => (
           <li key={index}>
-            <Image src={icon.src} alt={icon.alt} width={50} height={50} />
+            <Image
+              src={icon.src}
+              alt={icon.alt}
+              width={0}
+              height={0}
+              className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px] xl:w-[80px] xl:h-[80px] object-contain"
+            />
           </li>
         ))}
       </ul>
