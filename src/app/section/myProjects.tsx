@@ -51,7 +51,7 @@ export default function MyProjects() {
       <ul className="flex flex-col gap-8 mt-8 lg:max-w-4xl">
         {projects.map((project, index) => (
           <li
-            className="shadow-sm rounded-xl font-crimson bg-white "
+            className="shadow-sm rounded-xl font-crimson  bg-dots"
             key={index}
           >
             <Image
@@ -92,7 +92,7 @@ export default function MyProjects() {
                   {project.secondTag}
                 </span>
               </div>
-              <button className="mt-8 text-[22px] md:text-[26px] lg:text-[30px] inset-shadow-sm inset-shadow-[#FFA585] font-medium font-fredoka py-2 lg:py-4 rounded-xl">
+              <button className="mt-8 bg-white shadow-sm inset-shadow-sm lg:mt-12 text-[22px] md:text-[26px] lg:text-[30px] font-medium font-fredoka py-2 lg:py-4 rounded-xl">
                 See a project
               </button>
             </div>
