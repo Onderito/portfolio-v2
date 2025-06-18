@@ -34,7 +34,7 @@ export default function AboutMe() {
             clean and intuitive UI/UX.
           </p>
           <GradientButton
-            className="absolute top-[-10%] right-0 xl:right-[70%] xl:top-[-5%] -rotate-12 md:right-[50%]"
+            className="absolute top-[-10%] right-0 md:right-[35%] xl:right-[70%] xl:top-[-5%] -rotate-12 "
             text="Who am I ?"
             size="lg"
           />
@@ -77,7 +77,7 @@ export default function AboutMe() {
           </p>
           <br />
           <p className="p-2 font-crimson italic text-[28px] lg:text-[35px] xl:text-[32px] text-center">
-            From sketch to final product — I do it all.
+            From sketch to final product <br /> — I do it all.
           </p>
         </div>
 
@@ -121,16 +121,16 @@ export default function AboutMe() {
             </span>
           </p>
           <Image
-            className="absolute top-0 left-0"
+            className="absolute top-0 left-0 w-[90px] h-[90px]  md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[100px] xl:w-[250px] xl:h-[200px] "
             src="/puzzle.svg"
             alt="Puzzle icon"
             width={250}
             height={200}
           />
           <Image
-            className="absolute top-5 right-5"
+            className="absolute top-5 right-5 hidden xl:block"
             src="/circle.svg"
-            alt="Mail icon"
+            alt="Circle icon"
             width={110}
             height={110}
           />

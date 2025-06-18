@@ -9,9 +9,9 @@ export default function Profile() {
         alt="Profile picture"
         width={0}
         height={0}
-        className=" w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[550px] lg:h-[550px] xl:w-[600px] xl:h-[600px] rounded-full xl:rounded-none absolute right-[-10%] xl:right-0 top-[15%] "
+        className=" w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[550px] lg:h-[550px] xl:w-[600px] xl:h-[600px] absolute right-[-10%] xl:right-0 top-0 rounded-full xl:rounded-none "
       />
-      <section className="p-4 pt-20 md:p-12 lg:p-16 xl:px-40 ">
+      <section className="p-4 pt-20 md:p-12 lg:p-16 xl:px-40">
         <Image
           src="/profile.svg"
           alt="Profile picture"
@@ -21,7 +21,7 @@ export default function Profile() {
         />
 
         <div>
-          <h1 className="font-crimson text-[44px] mt-4 md:text-[60px] lg:text-[68px] xl-text[84px] xl:leading-14">
+          <h1 className="font-crimson text-[44px] mt-4 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14">
             Hey, I'm Ulas Önder.
           </h1>
           <div>
