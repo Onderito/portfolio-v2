@@ -16,19 +16,19 @@ export default function MyProjects() {
       name: "Tripgather",
       image: "/tripgather-img.svg",
       text: "A complete travel planning platform where I led the frontend development with Angular and handled backend integration using Spring Boot. I focused on building reusable components, smooth user experience, and responsive layouts. The app allows users to collaboratively organize trips and share itineraries in real-time.",
-      url: "https://www.devcsi.com",
+      url: "https://tripgather.wcs-students.fr/home",
     },
     {
       name: "Sealocker app",
       image: "/sealocker-img.svg",
       text: "A marketing website for a startup that provides smart lockers for water sports. I designed and developed the site in Webflow, using CMS collections for scalable content. I also integrated custom GSAP animations for smooth transitions, enhancing the premium feel of the brand.",
-      url: "https://www.sealocker.com",
+      url: "https://www.sealocker.fr/",
     },
     {
       name: "My first portfolio",
       image: "/portfolio-img.svg",
       text: "My very first personal portfolio as a web developer. I built it with React and Tailwind CSS to showcase my projects and skills. I focused on clean design, accessibility, and responsiveness. It served as a stepping stone in my transition into full-time development.",
-      url: "https://www.ubby.com",
+      url: "https://onderulas-portfolio.vercel.app/",
     },
   ];
 
@@ -86,7 +86,9 @@ export default function MyProjects() {
                     {project.text}
                   </p>
                   <button className="py-3 bg-[#323232] font-crimson text-[20px] rounded-lg text-white px-6 mb-4 mt-6 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">
-                    <a href={project.url}>See my project</a>
+                    <a target="_blank" href={project.url}>
+                      See my project
+                    </a>
                   </button>
                 </div>
               </div>
