@@ -8,6 +8,8 @@ interface GradientButtonProps {
   disabled?: boolean;
   size?: "sm" | "md" | "lg" | "xl";
   variant?: "default" | "compact";
+  showCursor?: boolean; // ← NOUVEAU
+  enableHover?: boolean; // ← NOUVEAU
 }
 
 const GradientButton: React.FC<GradientButtonProps> = ({
@@ -17,8 +19,9 @@ const GradientButton: React.FC<GradientButtonProps> = ({
   disabled = false,
   size = "md",
   variant = "default",
+  showCursor = false,
+  enableHover = false,
 }) => {
-  // Définir les tailles
   const sizeClasses = {
     sm: "px-12 py-2 text-lg",
     md: "px-12 py-2 text-xl",
@@ -34,17 +37,21 @@ const GradientButton: React.FC<GradientButtonProps> = ({
         onClick={onClick}
         disabled={disabled}
         className={`
-          font-fredoka
-          font-semibold
+          font-shantell
+          font-bold
           ${sizeClasses[size]}
           rounded-xl
           bg-white
+          ${enableHover ? "hover:bg-transparent hover:text-white" : ""}
           shadow-sm
           text-black/50
           transition-all
           duration-200
-          disabled:cursor-not-allowed
           whitespace-nowrap
+          w-full
+          ${showCursor ? "cursor-pointer" : ""}
+          disabled:opacity-50
+          disabled:cursor-not-allowed
         `}
       >
         {text}

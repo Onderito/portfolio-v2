@@ -1,15 +1,26 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import GradientButton from "../components/button";
+import { set } from "mongoose";
 
 export default function AboutMe() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("ulas.onder@outlook.fr");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <section className="p-4 mt-10 md:p-12 lg:p-16 xl:p-40">
-      <h2 className="text-[32px] font-crimson md:text-[48px] lg:text-[58px]">
+    <section className="p-4 mt-10 md:p-12 lg:p-16 xl:px-40">
+      <h2 className="text-[32px] font-crimson md:text-[48px] lg:text-[58px] xl:text-[64px] ">
         About me
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 xl:auto-rows-fr gap-6 mt-8 md:mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 xl:auto-rows-fr gap-6 mt-8 md:mt-12 xl:mt-20">
         {/* Brain card */}
         <div className="flex flex-col justify-center items-center xl:col-span-4 gap-8 py-10 relative bg-[linear-gradient(to_bottom,_rgba(255,165,133,0.4)_0%,_rgba(255,165,133,0.3)_85%,_rgba(255,237,160,0.5)_110%)] shadow-sm rounded-xl p-6 xl:p-0 min-h-[350px]">
           <Image
@@ -19,7 +30,7 @@ export default function AboutMe() {
             height={210}
             className="xl:self-start"
           />
-          <p className="font-crimson italic text-[28px] lg:text-[35px] xl:text-[36px] text-center">
+          <p className="font-crimson text-[28px] lg:text-[35px] xl:text-[36px] text-center">
             I’m Ulas — a fullstack JavaScript developer who also loves crafting
             clean and intuitive UI/UX.
           </p>
@@ -31,21 +42,34 @@ export default function AboutMe() {
         </div>
 
         {/* Card build together */}
-        <div className="relative flex flex-col justify-center items-center gap-8 shadow-sm rounded-xl py-12 xl:col-span-2 min-h-[350px]">
+        <div className="relative flex flex-col justify-center items-center gap-8 shadow-sm rounded-xl py-12 xl:col-span-2 min-h-[350px] bg-dots ">
           <GradientButton
-            className="absolute -rotate-12 top-[-3%] left-0"
+            className="absolute rotate-8 top-[-3%] left-0 xl:top-[-30%] xl:left-35"
             text="Let's work together"
             size="lg"
+          />
+          <Image
+            className="absolute hidden xl:block right-[-40%] top-[-8%] -rotate-6"
+            src={"/arrow.svg"}
+            alt="Arrow icon"
+            width={120}
+            height={120}
           />
           <Image src="/rocket.svg" alt="Rocket icon" width={120} height={120} />
           <p className="font-crimson text-[28px] lg:text-[35px] xl:text-[30px] text-center">
             Let’s build something <br /> great together.
           </p>
-          <GradientButton className="rotate-12" text="Copy Email" size="lg" />
+          <GradientButton
+            showCursor={true}
+            enableHover={true}
+            onClick={handleCopy}
+            text="Copy Email"
+            size="lg"
+          />
         </div>
 
         {/* Card 3  */}
-        <div className="bg-gradient-to-l from-[#FFA585]/80 to-[#FFEDA0]/80 shadow-sm xl:col-span-2 rounded-xl py-12 flex flex-col justify-center items-center min-h-[350px]">
+        <div className="bg-gradient-to-l from-[#FFA585]/80 to-[#FFEDA0]/80 shadow-sm rounded-xl py-12 flex flex-col justify-center items-center min-h-[350px] xl:col-span-2 xl:col-start-5 xl:row-start-1">
           <p className="font-crimson italic text-[28px] lg:text-[35px] xl:text-[32px] text-center">
             Great design starts <br /> with empathy.
           </p>
@@ -85,10 +109,10 @@ export default function AboutMe() {
 
         {/* Final card */}
         <div
-          className="shadow-sm rounded-xl flex justify-center items-center relative py-12 px-6 md:col-span-2 xl:col-span-6 xl:col-start-1 xl:row-start-2
+          className="shadow-sm rounded-xl flex justify-center items-center relative py-12 px-6 md:col-span-2 xl:col-span-6 xl:col-start-1 xl:row-start-2 bg-dots
 "
         >
-          <p className="font-crimson italic text-[28px] lg:text-[35px] xl:text-[37px] text-center">
+          <p className="font-crimson text-[28px] lg:text-[35px] xl:text-[37px] text-center">
             I’m looking for a job where I can build efficient apps and <br />
             <span className="bg-gradient-to-r from-[#FFA585] to-[#FFEDA0] bg-clip-text text-transparent font-fredoka font-bold">
               grow my skills.

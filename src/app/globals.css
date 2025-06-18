@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
-
+@font-face {
+  font-family: shantell;
+  src: url("../app/assets/fonts/ShantellSans-Regular.ttf");
+}
 @import "tailwindcss";
 
 :root {
@@ -17,6 +20,7 @@
   --font-crimson: "Crimson Text", serif;
   --font-luckiest: "Luckiest Guy", cursive;
   --font-fredoka: "Fredoka", sans-serif;
+  --font-shantell: shantell, sans-serif;
 }
 
 @theme {

@@ -11,7 +11,7 @@ export default function Profile() {
         height={0}
         className=" w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[550px] lg:h-[550px] xl:w-[600px] xl:h-[600px] rounded-full xl:rounded-none absolute right-[-10%] xl:right-0 top-[15%] "
       />
-      <section className="p-4 pt-20 md:p-12 lg:p-16 xl:p-40 ">
+      <section className="p-4 pt-20 md:p-12 lg:p-16 xl:px-40 ">
         <Image
           src="/profile.svg"
           alt="Profile picture"
@@ -45,10 +45,10 @@ export default function Profile() {
             building.
           </p>
           <div className="mt-6 lg:mt-8 font-crimson text-[22px] lg:text-[28px] flex gap-3">
-            <button className="text-white shadow-md inset-shadow-md bg-[#2F2F2F] rounded-lg p-3 md:p-4 xl:p-5">
+            <button className="text-white shadow-md inset-shadow-md bg-[#2F2F2F] rounded-lg p-3 md:p-4 xl:px-6">
               See my projects
             </button>
-            <button className="text-[#0B66C2] shadow-xs inset-shadow-lg bg-[#0B66C2]/20 rounded-full p-3 md:p-4 xl:p-5 xl:px-8">
+            <button className="text-[#0B66C2] shadow-xs inset-shadow-lg bg-[#0B66C2]/20 rounded-full p-3 md:p-4 xl:py-1 xl:px-8 ">
               Linkedin
             </button>
           </div>
