@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Profile() {
   return (
-    <div className="relative overflow-x-hidden ">
+    <div className="relative overflow-x-hidden">
       <Image
         src="/little-noise.svg"
         alt="Profile picture"

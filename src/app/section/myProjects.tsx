@@ -1,119 +1,121 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 export default function MyProjects() {
+  const [swiperInstance, setSwiperInstance] = React.useState<any>(null);
+  const [isBeginning, setIsBeginning] = React.useState(true);
+  const [isEnd, setIsEnd] = React.useState(false);
   const projects = [
     {
-      name: "Sealocker app",
-      image: "/webflow-img.svg",
-      by: "No code + UI/UX",
-      text: "I designed and built a fully responsive website with Webflow, using native CMS features for structured content and integrating custom animations with GSAP",
-      url: "https://www.sealocker.com",
-      firstTag: "Webflow",
-      firstTextColor: "rgba(80, 167, 255, 0.4)",
-      firstBgColor: "rgba(11, 102, 194, 0.1)",
-      secondTag: "G-sap",
-      secondTextColor: "rgba(136, 206, 2, 0.4)",
-      secondBgColor: "rgba(136, 206, 2, 0.1)",
+      name: "Tripgather",
+      image: "/tripgather-img.svg",
+      text: "A complete travel planning platform where I led the frontend development with Angular and handled backend integration using Spring Boot. I focused on building reusable components, smooth user experience, and responsive layouts. The app allows users to collaboratively organize trips and share itineraries in real-time.",
+      url: "https://www.devcsi.com",
     },
     {
-      name: "Tripgather",
-      image: "/angular-spring-img.svg",
-      by: "coding",
-      text: "I designer and built a fully responsive website with Angular and Spring",
-      url: "https://www.devcsi.com",
-      firstTag: "Angular",
-      firstTextColor: "rgba(229, 58, 54, 0.4)",
-      firstBgColor: "rgba(231, 62, 57, 0.1)",
-      secondTag: "Spring",
-      secondTextColor: "rgba(136, 206, 2, 0.4)",
-      secondBgColor: "rgba(136, 206, 2, 0.1)",
+      name: "Sealocker app",
+      image: "/sealocker-img.svg",
+      text: "A marketing website for a startup that provides smart lockers for water sports. I designed and developed the site in Webflow, using CMS collections for scalable content. I also integrated custom GSAP animations for smooth transitions, enhancing the premium feel of the brand.",
+      url: "https://www.sealocker.com",
     },
     {
       name: "My first portfolio",
-      image: "/react-img.svg",
-      by: "coding",
-      text: "A clean and responsive portfolio built with React & Tailwind — my first step into web development.",
+      image: "/portfolio-img.svg",
+      text: "My very first personal portfolio as a web developer. I built it with React and Tailwind CSS to showcase my projects and skills. I focused on clean design, accessibility, and responsiveness. It served as a stepping stone in my transition into full-time development.",
       url: "https://www.ubby.com",
-      firstTag: "React",
-      firstTextColor: "rgba(80, 167, 255, 0.4)",
-      firstBgColor: "rgba(11, 102, 194, 0.1)",
-      secondTag: "Tailwind",
-      secondTextColor: "rgba(80, 167, 255, 0.4)",
-      secondBgColor: "rgba(11, 102, 194, 0.1)",
     },
   ];
+
   return (
-    <section className="mt-10 p-4 md:p-12 lg:p-16  relative overflow-hidden">
-      <h2 className="text-[32px] md:text-[48px] lg:text-[58px]  font-crimson">
+    <section className="mt-10 p-4 md:p-12 lg:p-16 xl:px-40 relative overflow-hidden">
+      <h2 className="text-[32px] md:text-[48px] lg:text-[58px] font-crimson">
         My projects
       </h2>
-      <ul className="flex flex-col gap-8 mt-8 lg:max-w-4xl  ">
+
+      {/* Version Carousel visible en xl */}
+      <div className="hidden xl:block">
+        <button
+          disabled={isBeginning}
+          className="my-prev-button absolute left-20 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-white shadow-md text-black rounded-xl font-shantell cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-300  "
+        >
+          Prev
+        </button>
+        <button
+          disabled={isEnd}
+          className="my-next-button absolute right-20 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-[#2B2B2B] shadow-md text-white rounded-xl font-shantell cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-300"
+        >
+          Next
+        </button>
+        <Swiper
+          modules={[Navigation]}
+          navigation={{
+            nextEl: ".my-next-button",
+            prevEl: ".my-prev-button",
+          }}
+          spaceBetween={40}
+          slidesPerView={1}
+          onSwiper={(swiper) => {
+            setSwiperInstance(swiper);
+            setIsBeginning(swiper.isBeginning);
+            setIsEnd(swiper.isEnd);
+          }}
+          onSlideChange={(swiper) => {
+            setIsBeginning(swiper.isBeginning);
+            setIsEnd(swiper.isEnd);
+          }}
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={index}>
+              <div className="border border-[#EBEBEB] rounded-xl mt-6">
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={1000}
+                  height={500}
+                  className="w-full h-auto py-4 px-4"
+                />
+                <div className="px-4">
+                  <h3 className="font-shantell text-[35px]">{project.name}</h3>
+                  <p className="text-[#6B6B6B] text-[18px] mt-1">
+                    {project.text}
+                  </p>
+                  <button className="py-3 bg-[#323232] font-crimson text-[20px] rounded-lg text-white px-6 mb-4 mt-6 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">
+                    <a href={project.url}>See my project</a>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      {/* Version en liste visible jusqu’à lg */}
+      <div className="block xl:hidden">
         {projects.map((project, index) => (
-          <li
-            className="shadow-sm rounded-xl font-crimson bg-dots "
-            key={index}
-          >
+          <div key={index} className="border border-[#EBEBEB] rounded-xl mt-6">
             <Image
               src={project.image}
-              alt="Project image"
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="w-full h-auto object-cover p-4 md:p-6 lg:p-8"
+              alt={project.name}
+              width={1000}
+              height={500}
+              className="w-full h-auto py-4 px-4"
             />
-            <div className="flex flex-col p-4 md:p-6 lg:p-8 pb-4">
-              <h3 className="font-fredoka text-[25px] md:text-[35px] lg:text-[40px] ">
-                {project.name}
-              </h3>
-              <p className="text-[#B5B5B5] text-[18px] font-fredoka md:text-[22px] lg:text-[24px]  italic">
-                {project.by}
-              </p>
-              <p className="mt-5 text-[19px] md:text-[24px] lg:text-[28px]  font-fredoka font-light ">
-                {project.text}
-              </p>
-              <div className="flex gap-2 mt-6">
-                <span
-                  style={{
-                    backgroundColor: project.firstBgColor,
-                    color: project.firstTextColor,
-                  }}
-                  className="px-4 py-1 rounded-full text-[20px] md:text-[25px] lg:text-[30px] font-fredoka font-semibold"
-                >
-                  {project.firstTag}
-                </span>
-                <span
-                  style={{
-                    backgroundColor: project.secondBgColor,
-                    color: project.secondTextColor,
-                  }}
-                  className="px-3 py-1 rounded-full text-[20px] md:text-[25px] lg:text-[30px] font-fredoka font-semibold"
-                >
-                  {project.secondTag}
-                </span>
-              </div>
-              <button className="mt-8 bg-white shadow-sm inset-shadow-sm lg:mt-12 text-[22px] md:text-[26px] lg:text-[30px] font-medium font-fredoka py-2 lg:py-4 rounded-xl">
-                See a project
+            <div className="px-4">
+              <h3 className="font-shantell text-[20px]">{project.name}</h3>
+              <p className="text-[#6B6B6B] text-[14px] mt-1">{project.text}</p>
+              <button className="py-3 bg-[#323232] font-crimson text-[16px] rounded-lg text-white px-6 mb-4 mt-4 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">
+                <a href={project.url}>See my project</a>
               </button>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
-      {/* <Image
-        src={"/little-blob-blur.svg"}
-        alt="Little blob"
-        width={0}
-        height={0}
-        sizes="100vw"
-        className="w-full h-auto object-cover absolute bottom-0 -z-10"
-      /> */}
-      {/* <Image
-        src={"/big-blob-blur.svg"}
-        alt="Big blob"
-        width={0}
-        height={0}
-        className="w-full h-auto object-cover absolute top-10 left-0 -z-10"
-      /> */}
+      </div>
     </section>
   );
 }
