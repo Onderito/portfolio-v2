@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
-
+@font-face {
+  font-family: shantell;
+  src: url("../app/assets/fonts/ShantellSans-Regular.ttf");
+}
 @import "tailwindcss";
 
 :root {
@@ -17,16 +20,18 @@
   --font-crimson: "Crimson Text", serif;
   --font-luckiest: "Luckiest Guy", cursive;
   --font-fredoka: "Fredoka", sans-serif;
+  --font-shantell: shantell, sans-serif;
 }
 
 @theme {
   --inset-shadow-md: inset 0 4px 0 rgba(141, 141, 141, 0.25);
   --inset-shadow-lg: inset 0 1px 0 #0b66c2;
+  --shadow-orange: 4px 4px 0 #ffa585;
 }
 
 .bg-dots {
-  background-image: radial-gradient(#00000028 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: radial-gradient(#00000013 1px, transparent 1px);
+  background-size: 20px 20px;
   background-repeat: repeat;
   background-color: #fff; /* couleur de fond derrière les points */
 }
