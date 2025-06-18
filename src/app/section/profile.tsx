@@ -45,11 +45,15 @@ export default function Profile() {
             building.
           </p>
           <div className="mt-6 lg:mt-8 font-crimson text-[22px] lg:text-[28px] flex gap-3">
-            <button className="text-white shadow-md inset-shadow-md bg-[#2F2F2F] rounded-lg p-3 md:p-4 xl:px-6">
-              See my projects
+            <button className="text-white shadow-md inset-shadow-md bg-[#2F2F2F] rounded-lg p-3 md:p-4 xl:px-6 cursor-pointer">
+              <a target="_blank" href="https://github.com/Onderito">
+                See my projects
+              </a>
             </button>
-            <button className="text-[#0B66C2] shadow-xs inset-shadow-lg bg-[#0B66C2]/20 rounded-full p-3 md:p-4 xl:py-1 xl:px-8 ">
-              Linkedin
+            <button className="text-[#0B66C2] shadow-xs inset-shadow-lg bg-[#0B66C2]/20 rounded-full p-3 md:p-4 xl:py-1 xl:px-8 cursor-pointer">
+              <a target="_blank" href="https://www.linkedin.com/in/ulasonder/">
+                Linkedin
+              </a>
             </button>
           </div>
         </div>

@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import GradientButton from "../components/button";
-import { set } from "mongoose";
 
 export default function AboutMe() {
   const [copied, setCopied] = useState(false);
@@ -16,12 +15,12 @@ export default function AboutMe() {
 
   return (
     <section className="p-4 mt-10 md:p-12 lg:p-16 xl:px-40">
-      <h2 className="text-[32px] font-crimson md:text-[48px] lg:text-[58px] xl:text-[64px] ">
+      <h2 className="text-[32px] font-crimson md:text-[48px] lg:text-[58px] xl:text-[64px]">
         About me
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 xl:auto-rows-fr gap-6 mt-8 md:mt-12 xl:mt-20">
-        {/* Brain card */}
+        {/* CARD 1 */}
         <div className="flex flex-col justify-center items-center xl:col-span-4 gap-8 py-10 relative bg-[linear-gradient(to_bottom,_rgba(255,165,133,0.4)_0%,_rgba(255,165,133,0.3)_85%,_rgba(255,237,160,0.5)_110%)] shadow-sm rounded-xl p-6 xl:p-0 min-h-[350px]">
           <Image
             src="/brain.svg"
@@ -41,7 +40,7 @@ export default function AboutMe() {
           />
         </div>
 
-        {/* Card build together */}
+        {/* CARD 2 */}
         <div className="relative flex flex-col justify-center items-center gap-8 shadow-sm rounded-xl py-12 xl:col-span-2 min-h-[350px] bg-dots ">
           <GradientButton
             className="absolute rotate-8 top-[-3%] left-0 xl:top-[-30%] xl:left-35"
@@ -66,9 +65,12 @@ export default function AboutMe() {
             text="Copy Email"
             size="lg"
           />
+          <span className="absolute bottom-2 text-4xl">
+            {copied ? "✓" : ""}
+          </span>
         </div>
 
-        {/* Card 3  */}
+        {/* CARD 3 */}
         <div className="bg-gradient-to-l from-[#FFA585]/80 to-[#FFEDA0]/80 shadow-sm rounded-xl py-12 flex flex-col justify-center items-center min-h-[350px] xl:col-span-2 xl:col-start-5 xl:row-start-1">
           <p className="font-crimson italic text-[28px] lg:text-[35px] xl:text-[32px] text-center">
             Great design starts <br /> with empathy.
@@ -79,7 +81,7 @@ export default function AboutMe() {
           </p>
         </div>
 
-        {/* Languages */}
+        {/* CARD 4 */}
         <div className="xl:col-span-2 shadow-sm rounded-xl relative min-h-[350px] flex flex-col justify-center items-center">
           <div className="relative overflow-hidden rounded-xl w-full h-full flex flex-col justify-center items-center gap-8">
             <Image
@@ -88,7 +90,7 @@ export default function AboutMe() {
               fill
               className="absolute w-full h-full object-cover -z-10"
             />
-            <div className="flex flex-col gap-4 lg:gap-6 font-fredoka font-semibold text-[30px] lg:text-[35px] text-[#3C3C3C]">
+            <div className="flex flex-col gap-4 lg:gap-6 font-shantell font-semibold text-[30px] lg:text-[35px] text-[#3C3C3C]">
               <button className="border-2 border-white rounded-3xl px-8 py-1 shadow-md backdrop-blur-2xl bg-white/25">
                 French
               </button>
@@ -107,7 +109,7 @@ export default function AboutMe() {
           />
         </div>
 
-        {/* Final card */}
+        {/* CARD 5 */}
         <div
           className="shadow-sm rounded-xl flex justify-center items-center relative py-12 px-6 md:col-span-2 xl:col-span-6 xl:col-start-1 xl:row-start-2 bg-dots
 "

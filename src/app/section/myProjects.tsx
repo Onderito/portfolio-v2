@@ -44,14 +44,14 @@ export default function MyProjects() {
     },
   ];
   return (
-    <section className="mt-10 p-4 md:p-12 lg:p-16 relative overflow-hidden">
-      <h2 className="text-[32px] md:text-[48px] lg:text-[58px] font-crimson">
+    <section className="mt-10 p-4 md:p-12 lg:p-16  relative overflow-hidden">
+      <h2 className="text-[32px] md:text-[48px] lg:text-[58px]  font-crimson">
         My projects
       </h2>
-      <ul className="flex flex-col gap-8 mt-8 lg:max-w-4xl">
+      <ul className="flex flex-col gap-8 mt-8 lg:max-w-4xl  ">
         {projects.map((project, index) => (
           <li
-            className="shadow-sm rounded-xl font-crimson  bg-dots"
+            className="shadow-sm rounded-xl font-crimson bg-dots "
             key={index}
           >
             <Image
@@ -66,10 +66,10 @@ export default function MyProjects() {
               <h3 className="font-fredoka text-[25px] md:text-[35px] lg:text-[40px] ">
                 {project.name}
               </h3>
-              <p className="text-[#B5B5B5] text-[18px] font-fredoka md:text-[22px] lg:text-[24px] italic">
+              <p className="text-[#B5B5B5] text-[18px] font-fredoka md:text-[22px] lg:text-[24px]  italic">
                 {project.by}
               </p>
-              <p className="mt-5 text-[19px] md:text-[24px] lg:text-[28px] font-fredoka font-light ">
+              <p className="mt-5 text-[19px] md:text-[24px] lg:text-[28px]  font-fredoka font-light ">
                 {project.text}
               </p>
               <div className="flex gap-2 mt-6">
@@ -99,21 +99,21 @@ export default function MyProjects() {
           </li>
         ))}
       </ul>
-      <Image
+      {/* <Image
         src={"/little-blob-blur.svg"}
         alt="Little blob"
         width={0}
         height={0}
         sizes="100vw"
         className="w-full h-auto object-cover absolute bottom-0 -z-10"
-      />
-      <Image
+      /> */}
+      {/* <Image
         src={"/big-blob-blur.svg"}
         alt="Big blob"
         width={0}
         height={0}
         className="w-full h-auto object-cover absolute top-10 left-0 -z-10"
-      />
+      /> */}
     </section>
   );
 }
