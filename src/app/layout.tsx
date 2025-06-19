@@ -25,9 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-dots relative min-h-screen`}
       >
-        {children}
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );

@@ -34,9 +34,28 @@ export default function MyProjects() {
 
   return (
     <section className="mt-10 p-4 md:p-12 lg:p-16 xl:px-60 relative overflow-hidden">
-      <h2 className="text-[32px] md:text-[48px] lg:text-[58px] xl:text-[64px] text-center font-crimson">
-        My Creative Journey
-      </h2>
+      <div className="flex justify-center items-center">
+        <Image
+          className="bg-[#2F2F2F] rotate-12 rounded-xl border-2 border-[#0B0B0B] mr-4 xl:mr-6 w-[50px] h-[50px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]"
+          src="/laptop.svg"
+          alt="Laptop"
+          width={0}
+          height={0}
+        />
+        <h2 className="text-[32px] md:text-[48px] lg:text-[58px] xl:text-[64px] text-center font-crimson">
+          My Creative{" "}
+          <span className="bg-[#FFA585]/50 text-[#FFA585] border border-[#FFA585] p-2 font-shantell rounded-lg relative overflow-hidden">
+            Journey
+            <Image
+              src="/ellipse.svg"
+              alt="Eclipse background"
+              width={566}
+              height={380}
+              className="absolute inset-0 z-0 w-full object-cover rounded-lg"
+            />
+          </span>
+        </h2>
+      </div>
 
       {/* Version Carousel visible en xl */}
       <div className="hidden xl:block mt-8 md:mt-12 xl:mt-14">
