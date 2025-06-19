@@ -9,7 +9,7 @@ const experiences = [
     textClass: "text-[#50A7FF]",
   },
   {
-    date: "2023 - 2024 (6 months)",
+    date: "2024 - 2025 (15 months)",
     title: "Full stack developer",
     company: "Sealocker",
     bgClass: "bg-[#FF946D]/20",
@@ -27,7 +27,7 @@ const experiences = [
 export default function MyExperiences() {
   return (
     <section className="px-4 mt-10 md:px-12 lg:p-16 xl:px-40">
-      <h2 className="text-[32px] md:text-[48px] lg:text-[58px] font-crimson">
+      <h2 className="text-[32px] md:text-[48px] lg:text-[58px] xl:text-[64px] font-crimson">
         My experiences
       </h2>
 

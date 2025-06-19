@@ -24,12 +24,12 @@ export default function Navbar() {
       </div>
 
       <div className="hidden lg:block ">
-        <nav className="font-crimson shadow-md p-5 xl:p-8 rounded-2xl fixed right-[-1%] top-14 z-50 backdrop-blur-md bg-white/40 border border-white/20 ">
-          <ul className="flex items-center gap-10 text-2xl xl:text-3xl">
-            <li>Home</li>
-            <li>About me</li>
-            <li>My experiences</li>
-            <li>My projects</li>
+        <nav className="font-crimson border-[#DDDDDD] border p-5 xl:p-8 rounded-2xl fixed right-[-1%] top-14 z-50 backdrop-blur-md bg-white/40  ">
+          <ul className="flex items-center text-2xl xl:text-3xl divide-x divide-[#DDDDDD]">
+            <li className="px-4">Home</li>
+            <li className="px-4">About me</li>
+            <li className="px-4">My experiences</li>
+            <li className="px-4">My projects</li>
           </ul>
         </nav>
       </div>

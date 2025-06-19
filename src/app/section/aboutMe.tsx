@@ -77,7 +77,7 @@ export default function AboutMe() {
           </p>
           <br />
           <p className="p-2 font-crimson italic text-[28px] lg:text-[35px] xl:text-[32px] text-center">
-            From sketch to final product <br /> — I do it all.
+            From sketch to final product — I do it all.
           </p>
         </div>
 

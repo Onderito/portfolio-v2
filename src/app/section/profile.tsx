@@ -9,9 +9,16 @@ export default function Profile() {
         alt="Profile picture"
         width={0}
         height={0}
-        className=" w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[550px] lg:h-[550px] xl:w-[600px] xl:h-[600px] absolute right-[-10%] xl:right-0 top-0 rounded-full xl:rounded-none "
+        className=" w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[550px] lg:h-[550px] xl:w-[600px] xl:h-[600px] absolute right-[-10%] xl:right-[-5%] xl:top-[19%] top-0 rounded-full xl:rounded-none "
       />
-      <section className="p-4 pt-20 md:p-12 lg:p-16 xl:px-40">
+      <section className="p-4 pt-20 md:p-12 lg:p-16 xl:p-40 ">
+        <Image
+          src="/eclipse.svg"
+          alt="Eclipse background"
+          width={700}
+          height={380}
+          className="hidden xl:block absolute z-0 top-[-30%] left-[-20%] "
+        />
         <Image
           src="/profile.svg"
           alt="Profile picture"

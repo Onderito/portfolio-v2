@@ -33,22 +33,22 @@ export default function MyProjects() {
   ];
 
   return (
-    <section className="mt-10 p-4 md:p-12 lg:p-16 xl:px-40 relative overflow-hidden">
-      <h2 className="text-[32px] md:text-[48px] lg:text-[58px] font-crimson">
-        My projects
+    <section className="mt-10 p-4 md:p-12 lg:p-16 xl:px-60 relative overflow-hidden">
+      <h2 className="text-[32px] md:text-[48px] lg:text-[58px] xl:text-[64px] text-center font-crimson">
+        My Creative Journey
       </h2>
 
       {/* Version Carousel visible en xl */}
-      <div className="hidden xl:block">
+      <div className="hidden xl:block mt-8 md:mt-12 xl:mt-14">
         <button
           disabled={isBeginning}
-          className="my-prev-button absolute left-20 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-white shadow-md text-black rounded-xl font-shantell cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-300  "
+          className="my-prev-button absolute left-40 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-white shadow-md text-black rounded-xl font-shantell cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-300  "
         >
           Prev
         </button>
         <button
           disabled={isEnd}
-          className="my-next-button absolute right-20 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-[#2B2B2B] shadow-md text-white rounded-xl font-shantell cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-300"
+          className="my-next-button absolute right-40 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-[#2B2B2B] shadow-md text-white rounded-xl font-shantell cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-300"
         >
           Next
         </button>
@@ -98,9 +98,12 @@ export default function MyProjects() {
       </div>
 
       {/* Version en liste visible jusqu’à lg */}
-      <div className="block xl:hidden">
+      <div className="relative block xl:hidden">
         {projects.map((project, index) => (
-          <div key={index} className="border border-[#EBEBEB] rounded-xl mt-6">
+          <div
+            key={index}
+            className="border border-[#EBEBEB] rounded-xl mt-8 md:mt-12 xl:mt-20"
+          >
             <Image
               src={project.image}
               alt={project.name}
@@ -118,6 +121,13 @@ export default function MyProjects() {
           </div>
         ))}
       </div>
+      <Image
+        src="/eclipse.png"
+        alt="Eclipse background"
+        width={566}
+        height={380}
+        className="hidden xl:blockabsolute bottom-[20%] right-[-20%] z-0"
+      />
     </section>
   );
 }
