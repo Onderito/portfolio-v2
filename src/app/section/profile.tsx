@@ -28,11 +28,11 @@ export default function Profile() {
         />
 
         <div>
-          <h1 className="font-crimson text-[44px] mt-4 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14">
+          <h1 className="font-crimson text-[#2F2F2F] text-[44px] mt-4 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14">
             Hey, I'm Ulas Önder.
           </h1>
           <div>
-            <h2 className="font-crimson text-[32px] md:text-[44px] lg:text[56px] xl:text-[64px]">
+            <h2 className="font-crimson text-[#2F2F2F] text-[32px] md:text-[44px] lg:text[56px] xl:text-[64px]">
               Developer Fullstack &{" "}
               <span className="relative font-shantell font-bold shadow-md p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-2xl bg-gradient-to-r from-[#FFA585] to-[#FFEDA0] bg-clip-text text-transparent border-2 border-double border-[#FFEDA0]">
                 Ux/Ui
@@ -47,7 +47,7 @@ export default function Profile() {
               designer
             </h2>
           </div>
-          <p className="text-[16px] font-crimson font-light mt-2 lg:mt-4 xl:mt-2 text-neutral-600 max-w-md md:max-w-2xl xl:max-w-3xl md:text-[24px] lg:text-[28px]">
+          <p className="text-[16px] font-crimson mt-2 lg:mt-4 xl:mt-2 text-neutral-700 max-w-md md:max-w-2xl xl:max-w-3xl md:text-[24px] lg:text-[28px]">
             I code like a dev and think like a designer. Always curious, always
             building.
           </p>
