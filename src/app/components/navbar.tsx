@@ -1,22 +1,40 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
-const navIcons = [
-  { src: "/home.svg", alt: "Home icon" },
-  { src: "/bag.svg", alt: "Bag icon" },
-  { src: "/folder.svg", alt: "Folder icon" },
-  { src: "/user.svg", alt: "User icon" },
-];
+interface Section {
+  label: string;
+  icon: string;
+  alt: string;
+  ref: React.RefObject<HTMLElement | null>; // <= ici
+}
 
-export default function Navbar() {
+interface NavbarProps {
+  sections: Section[];
+}
+
+export default function Navbar({ sections }: NavbarProps) {
+  const handleClick = (sectionRef: React.RefObject<HTMLElement | null>) => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div>
-      <div className="lg:hidden ">
+      <div className="lg:hidden">
         <nav className="inset-shadow-2xs rounded-full fixed bottom-0 p-5 w-full ">
-          <ul className="flex gap-4 items-center justify-around">
-            {navIcons.map((icon, index) => (
-              <li key={index}>
-                <Image src={icon.src} alt={icon.alt} width={26} height={26} />
+          <ul className="flex justify-around items-center">
+            {sections.map((section) => (
+              <li
+                key={section.label}
+                onClick={() => handleClick(section.ref)}
+                className="cursor-pointer"
+              >
+                <Image
+                  src={section.icon}
+                  alt={section.alt}
+                  width={24}
+                  height={24}
+                />
               </li>
             ))}
           </ul>
@@ -24,12 +42,17 @@ export default function Navbar() {
       </div>
 
       <div className="hidden lg:block ">
-        <nav className="font-crimson border-[#DDDDDD] border p-5 xl:p-8 rounded-2xl fixed right-[-1%] top-14 z-50 backdrop-blur-md bg-white/40  ">
+        <nav className="font-crimson border-[#DDDDDD] border p-5 xl:p-8 rounded-2xl fixed right-[-1%] top-14 z-50 backdrop-blur-md bg-white/40 ">
           <ul className="flex items-center text-2xl xl:text-3xl divide-x divide-[#DDDDDD]">
-            <li className="px-4">Home</li>
-            <li className="px-4">About me</li>
-            <li className="px-4">My experiences</li>
-            <li className="px-4">My projects</li>
+            {sections.map((section, index) => (
+              <li
+                key={section.label}
+                onClick={() => handleClick(section.ref)}
+                className={`px-4 cursor-pointer`}
+              >
+                {section.label}
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
