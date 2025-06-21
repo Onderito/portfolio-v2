@@ -44,7 +44,7 @@ export default function Navbar({ sections }: NavbarProps) {
       <div className="hidden lg:block ">
         <nav className="font-crimson border-[#DDDDDD] border p-5 xl:p-8 rounded-2xl fixed right-[-1%] top-14 z-50 backdrop-blur-md bg-white/40 ">
           <ul className="flex items-center text-2xl xl:text-3xl divide-x divide-[#DDDDDD]">
-            {sections.map((section, index) => (
+            {sections.map((section) => (
               <li
                 key={section.label}
                 onClick={() => handleClick(section.ref)}

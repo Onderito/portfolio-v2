@@ -18,7 +18,6 @@ const GradientButton: React.FC<GradientButtonProps> = ({
   className = "",
   disabled = false,
   size = "md",
-  variant = "default",
   showCursor = false,
   enableHover = false,
 }) => {

@@ -29,7 +29,7 @@ export default function Profile() {
 
         <div>
           <h1 className="font-crimson text-[#2F2F2F] text-[44px] mt-4 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14">
-            Hey, I'm Ulas Önder.
+            Hey, I&apos;m Ulas Önder.
           </h1>
           <div>
             <h2 className="font-crimson text-[#2F2F2F] text-[32px] md:text-[44px] lg:text[56px] xl:text-[64px]">

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -8,7 +8,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 export default function MyProjects() {
-  const [swiperInstance, setSwiperInstance] = React.useState<any>(null);
   const [isBeginning, setIsBeginning] = React.useState(true);
   const [isEnd, setIsEnd] = React.useState(false);
   const projects = [
@@ -80,7 +79,6 @@ export default function MyProjects() {
           spaceBetween={40}
           slidesPerView={1}
           onSwiper={(swiper) => {
-            setSwiperInstance(swiper);
             setIsBeginning(swiper.isBeginning);
             setIsEnd(swiper.isEnd);
           }}
