@@ -5,6 +5,7 @@ import Stack from "./section/stack";
 import AboutMe from "./section/aboutMe";
 import MyExperiences from "./section/myExperiences";
 import MyProjects from "./section/myProjects";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <AboutMe />
         <MyExperiences />
         <MyProjects />
+        <Footer />
       </main>
 
       {/* Navbar fixe en bas */}
