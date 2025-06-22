@@ -111,17 +111,17 @@ export default function AboutMe() {
 
         {/* CARD 5 */}
         <div
-          className="shadow-sm rounded-xl flex justify-center items-center relative py-12 px-6 md:col-span-2 xl:col-span-6 xl:col-start-1 xl:row-start-2 bg-dots
+          className="shadow-sm rounded-xl flex justify-center items-center relative overflow-hidden py-12 px-6 md:col-span-2 xl:col-span-6 xl:col-start-1 xl:row-start-2 bg-dots
 "
         >
-          <p className="font-crimson text-[28px] lg:text-[35px] xl:text-[37px] text-center">
+          <p className="font-crimson text-[26px] lg:text-[35px] xl:text-[37px] text-center">
             I’m looking for a job where I can build efficient apps and <br />
             <span className="bg-gradient-to-r from-[#FFA585] to-[#FFEDA0] bg-clip-text text-transparent font-fredoka font-bold">
               grow my skills.
             </span>
           </p>
           <Image
-            className="absolute top-0 left-0 w-[90px] h-[90px]  md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[100px] xl:w-[250px] xl:h-[200px] "
+            className="absolute top-[-5%] left-0 w-[90px] h-[90px]  md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[100px] xl:w-[250px] xl:h-[200px] "
             src="/puzzle.svg"
             alt="Puzzle icon"
             width={250}

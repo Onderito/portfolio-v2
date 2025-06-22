@@ -9,7 +9,7 @@ export default function Profile() {
         alt="Profile picture"
         width={0}
         height={0}
-        className=" w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[550px] lg:h-[550px] xl:w-[600px] xl:h-[600px] absolute right-[-10%] xl:right-[-5%] xl:top-[19%] top-0 md:top-[-10%] lg:top-30 lg:right-[-30%] rounded-full xl:rounded-none "
+        className=" w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[550px] lg:h-[550px] xl:w-[600px] xl:h-[600px] absolute right-[-20%] xl:right-[-5%] xl:top-[19%] top-0 md:top-[-10%] lg:top-30 lg:right-[-30%] rounded-full xl:rounded-none "
       />
       <section className="p-4 pt-20 md:p-12 lg:p-16 xl:p-40 ">
         <Image
@@ -28,11 +28,11 @@ export default function Profile() {
         />
 
         <div>
-          <h1 className="font-crimson text-[#2F2F2F] text-[44px] mt-4 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14">
+          <h1 className="font-crimson text-[#2F2F2F] text-[40px] mt-4 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14">
             Hey, I&apos;m Ulas Önder.
           </h1>
           <div>
-            <h2 className="font-crimson text-[#2F2F2F] text-[32px] md:text-[44px] lg:text[56px] xl:text-[64px]">
+            <h2 className="font-crimson text-[#2F2F2F] text-[27px] md:text-[44px] lg:text[56px] xl:text-[64px]">
               Developer Fullstack &{" "}
               <span className="relative font-shantell font-bold shadow-md p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-2xl bg-gradient-to-r from-[#FFA585] to-[#FFEDA0] bg-clip-text text-transparent border-2 border-double border-[#FFEDA0]">
                 Ux/Ui

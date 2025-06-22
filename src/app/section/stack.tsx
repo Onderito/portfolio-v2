@@ -19,7 +19,7 @@ export default function Stack() {
   const stackIcons = [...stack, ...stack]; // Duplicate the array
 
   return (
-    <div className="overflow-hidden w-full bg-white py-4 mt-20">
+    <div className="overflow-hidden w-full py-4 mt-20">
       <ul className="flex justify-center items-center animate-marquee gap-14 xl:gap-28 min-w-max ">
         {stackIcons.map((icon, index) => (
           <li key={index}>

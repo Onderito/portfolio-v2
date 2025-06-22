@@ -42,10 +42,10 @@ export default function MyExperiences() {
             <p className="text-[#cecece] text-[20px] md:text-[25px] lg:text-[30px] font-crimson italic">
               {exp.date}
             </p>
-            <h3 className="text-[26px] md:text-[35px] lg:text-[40px] font-fredoka font-light">
+            <h3 className="text-[24px] md:text-[35px] lg:text-[40px] font-fredoka font-light">
               {exp.title} at{" "}
               <span
-                className={`font-shantell font-semibold rounded-xl p-1 px-2 md:px-4 md:p-0 text-[22px] md:text-[35px] lg:text-[40] inline-block -rotate-4 ${exp.bgClass} ${exp.textClass}`}
+                className={`font-shantell font-semibold rounded-xl p-1 px-2 md:px-4 md:p-0 text-[18px] md:text-[35px] lg:text-[40] inline-block -rotate-4 ${exp.bgClass} ${exp.textClass}`}
               >
                 {exp.company}
               </span>
