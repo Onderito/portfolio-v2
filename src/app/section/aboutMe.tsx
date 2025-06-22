@@ -43,7 +43,7 @@ export default function AboutMe() {
         {/* CARD 2 */}
         <div className="relative flex flex-col justify-center items-center gap-8 shadow-sm rounded-xl py-12 xl:col-span-2 min-h-[350px] bg-dots ">
           <GradientButton
-            className="absolute rotate-8 top-[-3%] left-0 xl:top-[-30%] xl:left-35"
+            className="absolute rotate-8 top-[-3%] left-0 xl:top-[-30%] xl:left-55"
             text="Let's work together"
             size="lg"
           />
