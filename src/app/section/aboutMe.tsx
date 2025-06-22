@@ -30,7 +30,7 @@ export default function AboutMe() {
             className="xl:self-start"
           />
           <p className="font-crimson text-[28px] lg:text-[35px] xl:text-[36px] text-center">
-            I’m Ulas — a fullstack JavaScript developer who also loves crafting
+            I’m Ulas — a Fullstack JavaScript developer who also loves crafting
             clean and intuitive UI/UX.
           </p>
           <GradientButton

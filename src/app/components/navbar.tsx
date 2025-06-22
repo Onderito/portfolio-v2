@@ -21,7 +21,7 @@ export default function Navbar({ sections }: NavbarProps) {
   return (
     <div>
       <div className="lg:hidden">
-        <nav className="inset-shadow-2xs rounded-full fixed bottom-0 p-5 w-full ">
+        <nav className="inset-shadow-2xs bg-white/20 backdrop-blur-xs rounded-2xl fixed bottom-0 p-5 w-full ">
           <ul className="flex justify-around items-center">
             {sections.map((section) => (
               <li
