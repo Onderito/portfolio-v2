@@ -24,10 +24,10 @@ export default function MyProjects() {
       url: "https://www.sealocker.fr/",
     },
     {
-      name: "My first portfolio",
-      image: "/portfolio-img.svg",
-      text: "My very first personal portfolio as a web developer. I built it with React and Tailwind CSS to showcase my projects and skills. I focused on clean design, accessibility, and responsiveness. It served as a stepping stone in my transition into full-time development.",
-      url: "https://onderulas-portfolio.vercel.app/",
+      name: "Pokedex",
+      image: "/pokedex-img.svg",
+      text: "A Pokedex app built with Angular, utilizing the PokeAPI to fetch and display Pokemon data. I implemented features like search, filtering, and pagination, focusing on performance and user experience. The app showcases my skills in frontend development and API integration.",
+      url: "https://pokemon-app-ang.vercel.app/",
     },
   ];
 
