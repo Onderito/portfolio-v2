@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
+import { gsap } from "gsap";
 
 interface Section {
   label: string;
@@ -15,6 +16,17 @@ interface NavbarProps {
 }
 
 export default function Navbar({ sections }: NavbarProps) {
+  const navbarRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const nav = navbarRef.current;
+    gsap.from(nav, {
+      opacity: 0,
+      x: 400,
+      duration: 1.9,
+      ease: "power4.out",
+    });
+  }, []);
   const handleClick = (sectionRef: React.RefObject<HTMLElement | null>) => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -42,7 +54,10 @@ export default function Navbar({ sections }: NavbarProps) {
       </div>
 
       <div className="hidden lg:block ">
-        <nav className="font-crimson border-[#DDDDDD] border p-5 xl:p-8 rounded-2xl fixed right-[-1%] top-14 z-50 backdrop-blur-md bg-white/40 ">
+        <nav
+          ref={navbarRef}
+          className="font-crimson border-[#DDDDDD] border p-5 xl:p-8 rounded-2xl fixed right-[-1%] top-14 z-50 backdrop-blur-md bg-white/40 "
+        >
           <ul className="flex items-center text-2xl xl:text-3xl divide-x divide-[#DDDDDD]">
             {sections.map((section) => (
               <li

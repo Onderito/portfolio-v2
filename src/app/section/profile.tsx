@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import { animateProfileIntro } from "../animation/ProfileIntro";
 
 export default function Profile() {
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const subtitleRef = useRef<HTMLHeadingElement | null>(null);
+  const pinRef = useRef<HTMLImageElement | null>(null);
+  const profileRef = useRef<HTMLImageElement | null>(null);
+  const descRef = useRef<HTMLParagraphElement | null>(null);
+  const buttonRef = useRef<HTMLDivElement | null>(null);
+  const blobRef = useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    animateProfileIntro({
+      title: titleRef,
+      subtitle: subtitleRef,
+      pin: pinRef,
+      profile: profileRef,
+      description: descRef,
+      button: buttonRef,
+      blob: blobRef,
+    });
+  }, []);
   return (
     <div className="relative overflow-x-hidden">
       <Image
+        ref={blobRef}
         src="/little-noise.svg"
         alt="Profile picture"
         width={0}
@@ -20,6 +41,7 @@ export default function Profile() {
           className="hidden xl:block absolute z-0 top-[-30%] left-[-20%] "
         />
         <Image
+          ref={profileRef}
           src="/profile.svg"
           alt="Profile picture"
           width={0}
@@ -29,15 +51,22 @@ export default function Profile() {
         />
 
         <div>
-          <h1 className="font-crimson text-[#2F2F2F] text-[40px] mt-4 xl:mt-6 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14">
+          <h1
+            ref={titleRef}
+            className="font-crimson text-[#2F2F2F] text-[40px] mt-4 xl:mt-6 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14"
+          >
             Hey, I&apos;m Ulas Önder.
           </h1>
           <div>
-            <h2 className="font-crimson text-[#2F2F2F] text-[27px] md:text-[44px] lg:text[56px] xl:text-[64px]">
+            <h2
+              ref={subtitleRef}
+              className="font-crimson text-[#2F2F2F] text-[27px] md:text-[44px] lg:text[56px] xl:text-[64px]"
+            >
               Developer Fullstack &{" "}
               <span className="relative font-shantell font-bold shadow-md p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-2xl bg-gradient-to-r from-[#FFA585] to-[#FFEDA0] bg-clip-text text-transparent border-2 border-double border-[#FFEDA0]">
                 Ux/Ui
                 <Image
+                  ref={pinRef}
                   className=" w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] xl:w-[60px] xl:h-[60px] absolute top-[-46%] right-[-28%]"
                   src={"/pin.svg"}
                   alt="Pin icon"
@@ -48,11 +77,17 @@ export default function Profile() {
               designer
             </h2>
           </div>
-          <p className="text-[16px] font-crimson mt-2 lg:mt-4 xl:mt-4 text-neutral-700 max-w-md md:max-w-2xl xl:max-w-3xl md:text-[24px] lg:text-[28px]">
+          <p
+            ref={descRef}
+            className="text-[16px] font-crimson mt-2 lg:mt-4 xl:mt-4 text-neutral-700 max-w-md md:max-w-2xl xl:max-w-3xl md:text-[24px] lg:text-[28px]"
+          >
             I code like a dev and think like a designer. Always curious, always
             building.
           </p>
-          <div className="mt-6 lg:mt-8 xl:mt-8 font-crimson text-[22px] lg:text-[28px] flex gap-3">
+          <div
+            ref={buttonRef}
+            className="mt-6 lg:mt-8 xl:mt-8 font-crimson text-[22px] lg:text-[28px] flex gap-3"
+          >
             <button className="text-white shadow-md inset-shadow-md bg-[#2F2F2F] rounded-lg p-3 md:p-4 xl:px-6 cursor-pointer">
               <a target="_blank" href="https://github.com/Onderito">
                 See my projects
