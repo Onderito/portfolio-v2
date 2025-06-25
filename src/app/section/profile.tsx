@@ -24,11 +24,12 @@ export default function Profile() {
           alt="Profile picture"
           width={0}
           height={0}
-          className="w-[150px] h-[142px] md:w-[180px] md:h-[182px] lg:w-[200px] lg:h-[202px] xl:w-[300px] xl:h-[302px]"
+          quality={100}
+          className="w-[150px] h-[142px] md:w-[180px] md:h-[182px] lg:w-[200px] lg:h-[202px] xl:w-[250px] xl:h-[252px] "
         />
 
         <div>
-          <h1 className="font-crimson text-[#2F2F2F] text-[40px] mt-4 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14">
+          <h1 className="font-crimson text-[#2F2F2F] text-[40px] mt-4 xl:mt-6 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14">
             Hey, I&apos;m Ulas Önder.
           </h1>
           <div>
@@ -47,11 +48,11 @@ export default function Profile() {
               designer
             </h2>
           </div>
-          <p className="text-[16px] font-crimson mt-2 lg:mt-4 xl:mt-2 text-neutral-700 max-w-md md:max-w-2xl xl:max-w-3xl md:text-[24px] lg:text-[28px]">
+          <p className="text-[16px] font-crimson mt-2 lg:mt-4 xl:mt-4 text-neutral-700 max-w-md md:max-w-2xl xl:max-w-3xl md:text-[24px] lg:text-[28px]">
             I code like a dev and think like a designer. Always curious, always
             building.
           </p>
-          <div className="mt-6 lg:mt-8 font-crimson text-[22px] lg:text-[28px] flex gap-3">
+          <div className="mt-6 lg:mt-8 xl:mt-8 font-crimson text-[22px] lg:text-[28px] flex gap-3">
             <button className="text-white shadow-md inset-shadow-md bg-[#2F2F2F] rounded-lg p-3 md:p-4 xl:px-6 cursor-pointer">
               <a target="_blank" href="https://github.com/Onderito">
                 See my projects

@@ -31,7 +31,7 @@ export default function MyExperiences() {
         My experiences
       </h2>
 
-      <div className="mt-8 md:mt-12 xl:mt-20 flex flex-col gap-6 xl:gap-12">
+      <div className="mt-8 md:mt-12 xl:mt-10 flex flex-col gap-6 xl:gap-12">
         {experiences.map((exp, index) => (
           <div
             key={index}

@@ -16,9 +16,9 @@ export default function Home() {
 
   const sections = [
     { label: "Home", icon: "/home.svg", alt: "Home", ref: homeRef },
-    { label: "About", icon: "/user.svg", alt: "About", ref: aboutRef },
+    { label: "About me", icon: "/user.svg", alt: "About", ref: aboutRef },
     {
-      label: "Experience",
+      label: "My experiences",
       icon: "/bag.svg",
       alt: "Experience",
       ref: experiencesRef,

@@ -57,7 +57,7 @@ export default function MyProjects() {
       </div>
 
       {/* Version Carousel visible en xl */}
-      <div className="hidden xl:block mt-8 md:mt-12 xl:mt-14">
+      <div className="hidden xl:block mt-8 md:mt-12 xl:mt-10">
         <button
           disabled={isBeginning}
           className="my-prev-button absolute left-40 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-white shadow-md text-black rounded-xl font-shantell cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-300  "
@@ -98,7 +98,7 @@ export default function MyProjects() {
                   className="w-full h-auto py-4 px-4"
                 />
                 <div className="px-4">
-                  <h3 className="font-shantell text-[35px]">{project.name}</h3>
+                  <h3 className="font-crimson text-[35px]">{project.name}</h3>
                   <p className="text-[#6B6B6B] text-[18px] mt-1">
                     {project.text}
                   </p>

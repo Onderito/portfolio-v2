@@ -19,9 +19,9 @@ export default function AboutMe() {
         About me
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 xl:auto-rows-fr gap-6 mt-8 md:mt-12 xl:mt-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 xl:auto-rows-fr gap-6 mt-8 md:mt-12 xl:mt-10">
         {/* CARD 1 */}
-        <div className="flex flex-col justify-center items-center xl:col-span-4 gap-8 py-10 relative bg-[linear-gradient(to_bottom,_rgba(255,165,133,0.4)_0%,_rgba(255,165,133,0.3)_85%,_rgba(255,237,160,0.5)_110%)] shadow-sm rounded-xl p-6 xl:p-0 min-h-[350px]">
+        <div className="flex flex-col justify-center items-center xl:col-span-4 gap-8 py-10 relative bg-white shadow-sm rounded-xl p-6 xl:p-0 min-h-[350px] bg-dots">
           <Image
             src="/brain.svg"
             alt="Brain icon"
@@ -29,9 +29,9 @@ export default function AboutMe() {
             height={210}
             className="xl:self-start"
           />
-          <p className="font-crimson text-[28px] lg:text-[35px] xl:text-[36px] text-center">
-            I’m Ulas — a Fullstack JavaScript developer who also loves crafting
-            clean and intuitive UI/UX.
+          <p className="font-crimson text-[28px] lg:text-[35px] xl:text-[30px] text-center ">
+            I’m a fullstack developer who loves clean UI/UX and building
+            thoughtful interfaces that just make sense
           </p>
           <GradientButton
             className="absolute top-[-10%] right-0 md:right-[35%] xl:right-[70%] xl:top-[-5%] -rotate-12 "
@@ -90,7 +90,7 @@ export default function AboutMe() {
               fill
               className="absolute w-full h-full object-cover -z-10"
             />
-            <div className="flex flex-col gap-4 lg:gap-6 font-shantell font-semibold text-[30px] lg:text-[35px] text-[#3C3C3C]">
+            <div className="flex flex-col gap-4 lg:gap-6 font-shantell text-[30px] lg:text-[35px] text-[#3C3C3C]">
               <button className="border-2 border-white rounded-3xl px-8 py-1 shadow-md backdrop-blur-2xl bg-white/25">
                 French
               </button>
@@ -111,28 +111,43 @@ export default function AboutMe() {
 
         {/* CARD 5 */}
         <div
-          className="shadow-sm rounded-xl flex justify-center items-center relative overflow-hidden py-12 px-6 md:col-span-2 xl:col-span-6 xl:col-start-1 xl:row-start-2 bg-dots
+          className="shadow-sm rounded-xl flex flex-col justify-center relative overflow-hidden py-12 px-6 md:col-span-2 xl:col-span-6 xl:col-start-1 xl:row-start-2 bg-squares
 "
         >
-          <p className="font-crimson text-[26px] lg:text-[35px] xl:text-[37px] text-center">
-            I’m looking for a job where I can build efficient apps and <br />
-            <span className="bg-gradient-to-r from-[#FFA585] to-[#FFEDA0] bg-clip-text text-transparent font-fredoka font-bold">
-              grow my skills.
-            </span>
+          <p className="font-shantell text-[#474747] text-[26px] lg:text-[35px] xl:text-[37px] text-center">
+            My journey as <span className="text-[#B3B3B3]">a developer</span>{" "}
+            <br />
           </p>
+
+          <div className="relative mt-10 md:flex md:justify-center md:items-center z-10 ">
+            <Image
+              src={"/coffee-shop.svg"}
+              alt="Coffee Shop"
+              width={0}
+              height={0}
+              className="absolute md:relative top-10 md:top-[-1%] left-20 w-[180px] md:w-[200px] lg:w-[250px] xl:w-[280px] z-70 md:z-0"
+            />
+            <Image
+              src={"/ui.svg"}
+              alt="UI Icon"
+              width={0}
+              height={0}
+              className="w-[180px] md:w-[200px] lg:w-[250px] xl:w-[280px] relative z-50 "
+            />
+            <Image
+              src={"/setup.svg"}
+              alt="setup"
+              width={0}
+              height={0}
+              className=" absolute md:relative top-[-10%] left-44 md:left-[-7%] rotate-24 md:rotate-0 w-[180px] md:w-[200px] lg:w-[250px] xl:w-[280px] z-60 md:z-0"
+            />
+          </div>
           <Image
-            className="absolute top-[-5%] left-0 w-[90px] h-[90px]  md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[100px] xl:w-[250px] xl:h-[200px] "
-            src="/puzzle.svg"
-            alt="Puzzle icon"
-            width={250}
-            height={200}
-          />
-          <Image
-            className="absolute top-5 right-5 hidden xl:block"
-            src="/circle.svg"
-            alt="Circle icon"
-            width={110}
-            height={110}
+            src={"/layer-blur.svg"}
+            alt="Layer icon"
+            width={0}
+            height={0}
+            className="absolute w-[108px] h-[108px] xl:w-[150px] xl:h-[150px] top-50 md:top-40 lg:top-55  right-0 md:right-10 lg:right-20 xl:right-30 z-0"
           />
         </div>
       </div>
