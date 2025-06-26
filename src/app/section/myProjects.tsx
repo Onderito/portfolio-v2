@@ -21,7 +21,6 @@ export default function MyProjects() {
         scrollTrigger: {
           trigger: "#project",
           start: "top 50%",
-          toggleActions: "play none none reverse",
         },
       });
 

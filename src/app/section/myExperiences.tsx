@@ -40,7 +40,6 @@ export default function MyExperiences() {
         scrollTrigger: {
           trigger: "#myExperiences",
           start: "top 60%",
-          toggleActions: "play none none reverse",
         },
       });
       tl.from(".my-experiences", {

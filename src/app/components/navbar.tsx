@@ -25,6 +25,12 @@ export default function Navbar({ sections }: NavbarProps) {
       x: 400,
       duration: 1.9,
       ease: "power4.out",
+      onStart: () => {
+        nav!.style.willChange = "transform, opacity";
+      },
+      onComplete: () => {
+        nav!.style.willChange = "auto";
+      },
     });
   }, []);
   const handleClick = (sectionRef: React.RefObject<HTMLElement | null>) => {
@@ -39,7 +45,7 @@ export default function Navbar({ sections }: NavbarProps) {
               <li
                 key={section.label}
                 onClick={() => handleClick(section.ref)}
-                className="cursor-pointer"
+                className={`px-4 cursor-pointer z-90`}
               >
                 <Image
                   src={section.icon}
