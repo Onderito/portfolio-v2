@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useLayoutEffect } from "react";
 import Image from "next/image";
 import { animateProfileIntro } from "../animation/ProfileIntro";
+import { gsap } from "gsap";
 
 export default function Profile() {
   const titleRef = useRef<HTMLHeadingElement | null>(null);
@@ -11,16 +12,22 @@ export default function Profile() {
   const buttonRef = useRef<HTMLDivElement | null>(null);
   const blobRef = useRef<HTMLImageElement | null>(null);
 
-  useEffect(() => {
-    animateProfileIntro({
-      title: titleRef,
-      subtitle: subtitleRef,
-      pin: pinRef,
-      profile: profileRef,
-      description: descRef,
-      button: buttonRef,
-      blob: blobRef,
+  const useIsomorphicLayoutEffect =
+    typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
+  useIsomorphicLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      animateProfileIntro({
+        title: titleRef,
+        subtitle: subtitleRef,
+        pin: pinRef,
+        profile: profileRef,
+        description: descRef,
+        button: buttonRef,
+        blob: blobRef,
+      });
     });
+    return () => ctx.revert(); // kill the animate but return your element to its original state
   }, []);
   return (
     <div className="relative overflow-x-hidden">

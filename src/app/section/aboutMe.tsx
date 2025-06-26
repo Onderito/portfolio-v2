@@ -1,11 +1,55 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import Image from "next/image";
 import GradientButton from "../components/button";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMe() {
   const [copied, setCopied] = useState(false);
+  const container = useRef(null);
+  const useIsomorphicLayoutEffect =
+    typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
+  useIsomorphicLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#aboutMe",
+          start: "top 60%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // Animate title
+      tl.from(".about-title", {
+        y: -90,
+        x: -90,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      // Animate bento cards with stagger
+      tl.from(
+        ".bento",
+        {
+          y: 50,
+          x: 100,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out",
+          stagger: {
+            each: 0.25,
+          },
+        },
+        "-=0.1"
+      ); // optionnel pour commencer un peu avant la fin du titre
+    }, container);
+    return () => ctx.revert();
+  }, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("ulas.onder@outlook.fr");
@@ -14,14 +58,17 @@ export default function AboutMe() {
   };
 
   return (
-    <section className="p-4 mt-10 md:p-12 lg:p-16 xl:px-40">
-      <h2 className="text-[32px] font-crimson md:text-[48px] lg:text-[58px] xl:text-[64px]">
+    <section ref={container} className="p-4 mt-10 md:p-12 lg:p-16 xl:px-40">
+      <h2
+        id="aboutMe"
+        className="about-title text-[32px] font-crimson md:text-[48px] lg:text-[58px] xl:text-[64px]"
+      >
         About me
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 xl:auto-rows-fr gap-6 mt-8 md:mt-12 xl:mt-10">
         {/* CARD 1 */}
-        <div className="flex flex-col justify-center items-center xl:col-span-4 gap-8 py-10 relative bg-white shadow-sm rounded-xl p-6 xl:p-0 min-h-[350px] bg-dots">
+        <div className="bento flex flex-col justify-center items-center xl:col-span-4 gap-8 py-10 relative bg-white shadow-sm rounded-xl p-6 xl:p-0 min-h-[350px] bg-dots">
           <Image
             src="/brain.svg"
             alt="Brain icon"
@@ -41,7 +88,7 @@ export default function AboutMe() {
         </div>
 
         {/* CARD 2 */}
-        <div className="relative flex flex-col justify-center items-center gap-8 shadow-sm rounded-xl py-12 xl:col-span-2 min-h-[350px] bg-dots ">
+        <div className="bento relative flex flex-col justify-center items-center gap-8 shadow-sm rounded-xl py-12 xl:col-span-2 min-h-[350px] bg-dots ">
           <GradientButton
             className="absolute rotate-8 top-[-3%] left-0 xl:top-[-30%] xl:left-55"
             text="Let's work together"
@@ -71,7 +118,7 @@ export default function AboutMe() {
         </div>
 
         {/* CARD 3 */}
-        <div className="bg-gradient-to-l from-[#FFA585]/80 to-[#FFEDA0]/80 shadow-sm rounded-xl py-12 flex flex-col justify-center items-center min-h-[350px] xl:col-span-2 xl:col-start-5 xl:row-start-1">
+        <div className="bento bg-gradient-to-l from-[#FFA585]/80 to-[#FFEDA0]/80 shadow-sm rounded-xl py-12 flex flex-col justify-center items-center min-h-[350px] xl:col-span-2 xl:col-start-5 xl:row-start-1">
           <p className="font-crimson italic text-[28px] lg:text-[35px] xl:text-[32px] text-center">
             Great design starts <br /> with empathy.
           </p>
@@ -82,7 +129,7 @@ export default function AboutMe() {
         </div>
 
         {/* CARD 4 */}
-        <div className="xl:col-span-2 shadow-sm rounded-xl relative min-h-[350px] flex flex-col justify-center items-center">
+        <div className="bento xl:col-span-2 shadow-sm rounded-xl relative min-h-[350px] flex flex-col justify-center items-center">
           <div className="relative overflow-hidden rounded-xl w-full h-full flex flex-col justify-center items-center gap-8">
             <Image
               src="/blob-blur.svg"
@@ -111,7 +158,7 @@ export default function AboutMe() {
 
         {/* CARD 5 */}
         <div
-          className="shadow-sm rounded-xl flex flex-col justify-center relative overflow-hidden py-12 px-6 md:col-span-2 xl:col-span-6 xl:col-start-1 xl:row-start-2 bg-squares
+          className="bento shadow-sm rounded-xl flex flex-col justify-center relative overflow-hidden py-12 px-6 md:col-span-2 xl:col-span-6 xl:col-start-1 xl:row-start-2 bg-squares
 "
         >
           <p className="font-shantell text-[#474747] text-[26px] lg:text-[35px] xl:text-[37px] text-center">

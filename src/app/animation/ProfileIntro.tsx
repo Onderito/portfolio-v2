@@ -14,7 +14,7 @@ export const animateProfileIntro = (refs: {
 
   if (refs.profile.current) {
     tl.from(refs.profile.current, {
-      opacity: 0,
+      autoAlpha: 0,
       y: 60,
       x: -90,
       rotate: -25,
