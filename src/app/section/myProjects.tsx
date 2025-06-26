@@ -1,13 +1,73 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect, useLayoutEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 import "swiper/css";
 import "swiper/css/navigation";
 
 export default function MyProjects() {
+  const container = useRef(null);
+  const useIsomorphicLayoutEffect =
+    typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
+  useIsomorphicLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#project",
+          start: "top 50%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // Animate title
+      tl.from(".project", {
+        x: -200,
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.7,
+        ease: "sine.out",
+      });
+
+      gsap.to(".laptop", {
+        y: -20, // hauteur du saut
+        opacity: 0.6,
+        duration: 1, // durée aller
+        ease: "sine.inOut", // smooth aller-retour
+        yoyo: true, // revient en bas
+        repeat: -1, // infini
+      });
+
+      // Animate bento cards with stagger
+      tl.from(
+        ".project-card",
+        {
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out",
+        },
+        "-=0.1"
+      );
+      tl.from(
+        ".ellipse",
+        {
+          y: 50,
+          x: 100,
+          opacity: 0,
+          ease: "elastic.out",
+          duration: 4,
+        },
+        "-=1"
+      );
+    }, container);
+    return () => ctx.revert();
+  }, []);
   const [isBeginning, setIsBeginning] = React.useState(true);
   const [isEnd, setIsEnd] = React.useState(false);
   const projects = [
@@ -32,16 +92,22 @@ export default function MyProjects() {
   ];
 
   return (
-    <section className="mt-10 p-4 md:p-12 lg:p-16 xl:px-60 relative overflow-hidden">
-      <div className="flex justify-center items-center">
+    <section
+      ref={container}
+      className="mt-10 p-4 md:p-12 lg:p-16 xl:px-60 relative overflow-hidden"
+    >
+      <div className="flex justify-center items-center relative">
         <Image
-          className="bg-[#2F2F2F] rotate-12 rounded-xl border-2 border-[#0B0B0B] mr-4 xl:mr-6 w-[45px] h-[45px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]"
+          className="laptop bg-[#2F2F2F] rotate-12 rounded-xl border-2 border-[#0B0B0B] mr-4 xl:mr-6 w-[45px] h-[45px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]"
           src="/laptop.svg"
           alt="Laptop"
           width={0}
           height={0}
         />
-        <h2 className="text-[28px] md:text-[48px] lg:text-[58px] xl:text-[64px] text-center font-crimson">
+        <h2
+          id="project"
+          className="project text-[28px] md:text-[48px] lg:text-[58px] xl:text-[64px] text-center font-crimson"
+        >
           My Creative{" "}
           <span className="bg-[#FFA585]/50 text-[#FFA585] border border-[#FFA585] p-2 font-shantell rounded-lg relative overflow-hidden">
             Journey
@@ -50,14 +116,14 @@ export default function MyProjects() {
               alt="Eclipse background"
               width={566}
               height={380}
-              className="absolute inset-0 z-0 w-full object-cover rounded-lg"
+              className="ellipse absolute inset-0 z-0 w-full object-cover rounded-lg"
             />
           </span>
         </h2>
       </div>
 
       {/* Version Carousel visible en xl */}
-      <div className="hidden xl:block mt-8 md:mt-12 xl:mt-10">
+      <div className="project-card hidden xl:block mt-8 md:mt-12 xl:mt-10">
         <button
           disabled={isBeginning}
           className="my-prev-button absolute left-40 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-white shadow-md text-black rounded-xl font-shantell cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-300  "
@@ -115,7 +181,7 @@ export default function MyProjects() {
       </div>
 
       {/* Version en liste visible jusqu’à lg */}
-      <div className="relative block xl:hidden">
+      <div className="project-card relative block xl:hidden">
         {projects.map((project, index) => (
           <div
             key={index}
