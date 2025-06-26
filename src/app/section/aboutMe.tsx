@@ -168,25 +168,25 @@ export default function AboutMe() {
 
           <div className="relative mt-10 md:flex md:justify-center md:items-center z-10 ">
             <Image
-              src={"/coffee-shop.svg"}
+              src={"/coffee-shop.jpg"}
               alt="Coffee Shop"
               width={250}
               height={280}
-              className="absolute md:relative top-10 md:top-[-1%] left-20 w-[160px] md:w-[200px] lg:w-[250px] xl:w-[280px] z-70 md:z-0"
+              className="hidden md:block absolute xl:-rotate-6 rounded-xl border-2 xl:border-4 border-white shadow-md md:relative top-10 md:top-[-1%] left-20 w-[160px] md:w-[200px] lg:w-[250px] xl:w-[280px] z-30 md:z-0"
             />
             <Image
-              src={"/ui.svg"}
+              src={"/ui.jpg"}
               alt="UI Icon"
               width={250}
               height={280}
-              className="w-[160px] md:w-[200px] lg:w-[250px] xl:w-[280px] relative z-50 "
+              className="rounded-xl -rotate-4 border-2 xl:border-4 border-white shadow-md w-[160px] md:w-[200px] lg:w-[250px] xl:w-[280px] relative z-50 "
             />
             <Image
-              src={"/setup.svg"}
+              src={"/setup.jpg"}
               alt="setup"
               width={250}
-              height={280}
-              className=" absolute md:relative top-[-10%] left-40 md:left-[-7%] rotate-16 md:rotate-0 w-[160px] md:w-[200px] lg:w-[250px] xl:w-[280px] z-60 md:z-0"
+              height={220}
+              className="absolute rotate-4 xl:rotate-6 rounded-xl border-2 xl:border-4 border-white shadow-md md:relative top-[-10%] xl:top-[8%] left-35 md:left-[-7%] md:rotate-0 w-[160px] md:w-[160px] lg:w-[250px] xl:w-[250px] z-60 md:z-0"
             />
           </div>
           <Image
