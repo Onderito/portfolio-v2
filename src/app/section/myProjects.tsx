@@ -59,8 +59,8 @@ export default function MyProjects() {
           y: 50,
           x: 100,
           opacity: 0,
-          ease: "elastic.out",
-          duration: 4,
+          ease: "power2.out",
+          duration: 1,
         },
         "-=1"
       );

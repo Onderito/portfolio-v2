@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect, useLayoutEffect } from "react";
 import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
   return (
