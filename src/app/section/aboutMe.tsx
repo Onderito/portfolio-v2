@@ -170,23 +170,23 @@ export default function AboutMe() {
             <Image
               src={"/coffee-shop.svg"}
               alt="Coffee Shop"
-              width={0}
-              height={0}
-              className="absolute md:relative top-10 md:top-[-1%] left-20 w-[180px] md:w-[200px] lg:w-[250px] xl:w-[280px] z-70 md:z-0"
+              width={250}
+              height={280}
+              className="absolute md:relative top-10 md:top-[-1%] left-20 w-[160px] md:w-[200px] lg:w-[250px] xl:w-[280px] z-70 md:z-0"
             />
             <Image
               src={"/ui.svg"}
               alt="UI Icon"
-              width={0}
-              height={0}
-              className="w-[180px] md:w-[200px] lg:w-[250px] xl:w-[280px] relative z-50 "
+              width={250}
+              height={280}
+              className="w-[160px] md:w-[200px] lg:w-[250px] xl:w-[280px] relative z-50 "
             />
             <Image
               src={"/setup.svg"}
               alt="setup"
-              width={0}
-              height={0}
-              className=" absolute md:relative top-[-10%] left-44 md:left-[-7%] rotate-24 md:rotate-0 w-[180px] md:w-[200px] lg:w-[250px] xl:w-[280px] z-60 md:z-0"
+              width={250}
+              height={280}
+              className=" absolute md:relative top-[-10%] left-40 md:left-[-7%] rotate-16 md:rotate-0 w-[160px] md:w-[200px] lg:w-[250px] xl:w-[280px] z-60 md:z-0"
             />
           </div>
           <Image
