@@ -5,6 +5,7 @@ import Image from "next/image";
 import GradientButton from "../components/button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMe() {
@@ -25,11 +26,11 @@ export default function AboutMe() {
 
       // Animate title
       tl.from(".about-title", {
-        y: -90,
-        x: -90,
+        x: -200,
         opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
+        scale: 0.9,
+        duration: 0.7,
+        ease: "sine.out",
       });
 
       // Animate bento cards with stagger

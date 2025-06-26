@@ -53,10 +53,10 @@ export default function Navbar({ sections }: NavbarProps) {
         </nav>
       </div>
 
-      <div className="hidden lg:block ">
+      <div className="hidden lg:block z-70 ">
         <nav
           ref={navbarRef}
-          className="font-crimson border-[#DDDDDD] border p-5 xl:p-8 rounded-2xl fixed right-[-1%] top-14 z-50 backdrop-blur-md bg-white/40 "
+          className="font-crimson border-[#DDDDDD] border p-5 xl:p-6 rounded-2xl fixed left-1/2 -translate-x-1/2 top-0 mt-4 z-80 backdrop-blur-md bg-white/70"
         >
           <ul className="flex items-center text-2xl xl:text-3xl divide-x divide-[#DDDDDD]">
             {sections.map((section) => (
@@ -65,7 +65,12 @@ export default function Navbar({ sections }: NavbarProps) {
                 onClick={() => handleClick(section.ref)}
                 className={`px-4 cursor-pointer`}
               >
-                {section.label}
+                <Image
+                  src={section.icon}
+                  alt={section.alt}
+                  width={24}
+                  height={24}
+                />
               </li>
             ))}
           </ul>
