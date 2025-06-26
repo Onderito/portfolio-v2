@@ -49,12 +49,12 @@ export default function Profile() {
         />
         <Image
           ref={profileRef}
-          src="/profile.svg"
+          src="/profile.webp"
           alt="Profile picture"
-          width={0}
-          height={0}
+          width={200}
+          height={200}
           quality={100}
-          className="w-[150px] h-[142px] md:w-[180px] md:h-[182px] lg:w-[200px] lg:h-[202px] xl:w-[250px] xl:h-[252px] "
+          className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-md border-4 border-white"
         />
 
         <div>
