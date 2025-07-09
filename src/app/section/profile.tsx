@@ -81,7 +81,7 @@ export default function Profile() {
                   height={0}
                 />
               </span>{" "}
-              designer
+              designer.
             </h2>
           </div>
           <p
