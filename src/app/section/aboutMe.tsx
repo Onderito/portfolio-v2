@@ -78,7 +78,7 @@ export default function AboutMe() {
           />
           <p className="font-crimson text-[28px] lg:text-[35px] xl:text-[30px] text-center ">
             I’m a fullstack developer who loves clean UI/UX and building
-            thoughtful interfaces that just make sense
+            thoughtful interfaces that just make sense.
           </p>
           <GradientButton
             className="absolute top-[-10%] right-0 md:right-[35%] xl:right-[70%] xl:top-[-5%] -rotate-12 "
