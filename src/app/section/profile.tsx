@@ -60,18 +60,18 @@ export default function Profile() {
         <div>
           <h1
             ref={titleRef}
-            className="font-crimson text-[#2F2F2F] text-[40px] mt-4 xl:mt-6 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14"
+            className="font-crimson text-[#3A3A3A] text-[40px] mt-4 xl:mt-6 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14"
           >
             Hey, I&apos;m Ulas Önder.
           </h1>
           <div>
             <h2
               ref={subtitleRef}
-              className="font-crimson text-[#2F2F2F] text-[27px] md:text-[44px] lg:text[56px] xl:text-[64px]"
+              className="font-crimson text-[#3A3A3A] text-[27px] md:text-[44px] lg:text[56px] xl:text-[64px]"
             >
               Developer Fullstack &{" "}
-              <span className="relative font-shantell font-bold shadow-md p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-2xl bg-gradient-to-r from-[#FFA585] to-[#FFEDA0] bg-clip-text text-transparent border-2 border-double border-[#FFEDA0]">
-                Ux/Ui
+              <span className="relative text-[#b4b4b4] bg-white font-shantell shadow-sm p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-lg">
+                ux/ui
                 <Image
                   ref={pinRef}
                   className=" w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] xl:w-[60px] xl:h-[60px] absolute top-[-46%] right-[-28%]"

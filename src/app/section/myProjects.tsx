@@ -33,15 +33,6 @@ export default function MyProjects() {
         ease: "sine.out",
       });
 
-      gsap.to(".laptop", {
-        y: -20, // hauteur du saut
-        opacity: 0.6,
-        duration: 1, // durée aller
-        ease: "sine.inOut", // smooth aller-retour
-        yoyo: true, // revient en bas
-        repeat: -1, // infini
-      });
-
       // Animate bento cards with stagger
       tl.from(
         ".project-card",
@@ -96,13 +87,6 @@ export default function MyProjects() {
       className="mt-10 p-4 md:p-12 lg:p-16 xl:px-60 relative overflow-hidden"
     >
       <div className="flex justify-center items-center relative">
-        <Image
-          className="laptop bg-[#2F2F2F] rotate-12 rounded-xl border-2 border-[#0B0B0B] mr-4 xl:mr-6 w-[45px] h-[45px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]"
-          src="/laptop.svg"
-          alt="Laptop"
-          width={0}
-          height={0}
-        />
         <h2
           id="project"
           className="project text-[28px] md:text-[48px] lg:text-[58px] xl:text-[64px] text-center font-crimson"
@@ -110,13 +94,6 @@ export default function MyProjects() {
           My Creative{" "}
           <span className="bg-[#FFA585]/50 text-[#FFA585] border border-[#FFA585] p-2 font-shantell rounded-lg relative overflow-hidden">
             Journey
-            <Image
-              src="/ellipse.svg"
-              alt="Eclipse background"
-              width={566}
-              height={380}
-              className="ellipse absolute inset-0 z-0 w-full object-cover rounded-lg"
-            />
           </span>
         </h2>
       </div>

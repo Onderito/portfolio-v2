@@ -3,20 +3,20 @@ import React, { useRef } from "react";
 import Navbar from "./components/navbar";
 import Profile from "./section/profile";
 import Stack from "./section/stack";
-import AboutMe from "./section/aboutMe";
 import MyExperiences from "./section/myExperiences";
 import MyProjects from "./section/myProjects";
 import Footer from "./components/footer";
+import Services from "./section/services";
 
 export default function Home() {
   const homeRef = useRef<HTMLElement | null>(null);
-  const aboutRef = useRef<HTMLElement | null>(null);
+  const servicesRef = useRef<HTMLElement | null>(null);
   const experiencesRef = useRef<HTMLElement | null>(null);
   const projectsRef = useRef<HTMLElement | null>(null);
 
   const sections = [
     { label: "Home", icon: "/home.svg", alt: "Home", ref: homeRef },
-    { label: "About me", icon: "/user.svg", alt: "About", ref: aboutRef },
+    { label: "Services", icon: "/user.svg", alt: "Services", ref: servicesRef },
     {
       label: "My experiences",
       icon: "/bag.svg",
@@ -38,8 +38,8 @@ export default function Home() {
           <Profile />
         </section>
         <Stack />
-        <section ref={aboutRef}>
-          <AboutMe />
+        <section ref={servicesRef}>
+          <Services />
         </section>
         <section ref={experiencesRef}>
           <MyExperiences />
