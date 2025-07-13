@@ -95,8 +95,10 @@ export default function MyProjects() {
                   className="w-full h-auto py-4 px-4"
                 />
                 <div className="px-4">
-                  <h3 className="font-crimson text-[35px]">{project.name}</h3>
-                  <p className="text-[#6B6B6B] text-[18px] mt-1">
+                  <h3 className="font-crimson text-[#3A3A3A text-[35px]">
+                    {project.name}
+                  </h3>
+                  <p className="text-[#999999] font-crimson text-[18px] mt-1">
                     {project.text}
                   </p>
                   <button className="py-3 bg-[#323232] font-crimson text-[20px] rounded-lg text-white px-6 mb-4 mt-6 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">

@@ -10,6 +10,7 @@ export default function HeroSection() {
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
         transition={{
           duration: 1.1,
+          delay: 1.2,
           ease: [0.25, 0.5, 0.5, 1], // power4.out
         }}
         src="/little-noise.svg"
@@ -90,7 +91,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{
               duration: 1.1,
-              delay: 0.7,
+              delay: 1.1,
               ease: easeOut,
             }}
             // ref={buttonRef}
