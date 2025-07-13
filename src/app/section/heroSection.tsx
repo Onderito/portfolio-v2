@@ -2,7 +2,7 @@ import React from "react";
 
 import { easeInOut, easeOut, motion } from "motion/react";
 
-export default function Profile() {
+export default function HeroSection() {
   return (
     <div className="relative overflow-x-hidden">
       <motion.img

@@ -1,63 +1,15 @@
 "use client";
 
-import React, { useRef, useEffect, useLayoutEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger);
+import { motion } from "motion/react";
+
 import "swiper/css";
 import "swiper/css/navigation";
 
 export default function MyProjects() {
-  const container = useRef(null);
-  const useIsomorphicLayoutEffect =
-    typeof window !== "undefined" ? useLayoutEffect : useEffect;
-
-  useIsomorphicLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#project",
-          start: "top 50%",
-        },
-      });
-
-      // Animate title
-      tl.from(".project", {
-        x: -200,
-        opacity: 0,
-        scale: 0.9,
-        duration: 0.7,
-        ease: "sine.out",
-      });
-
-      // Animate bento cards with stagger
-      tl.from(
-        ".project-card",
-        {
-          y: 50,
-          opacity: 0,
-          duration: 1,
-          ease: "power2.out",
-        },
-        "-=0.1"
-      );
-      tl.from(
-        ".ellipse",
-        {
-          y: 50,
-          x: 100,
-          opacity: 0,
-          ease: "power2.out",
-          duration: 1,
-        },
-        "-=1"
-      );
-    }, container);
-    return () => ctx.revert();
-  }, []);
   const [isBeginning, setIsBeginning] = React.useState(true);
   const [isEnd, setIsEnd] = React.useState(false);
   const projects = [
@@ -82,14 +34,17 @@ export default function MyProjects() {
   ];
 
   return (
-    <section
-      ref={container}
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: true, amount: 0.5 }}
       className="mt-10 p-4 md:p-12 lg:p-16 xl:px-60 relative overflow-hidden"
     >
       <div className="flex justify-center items-center relative">
         <h2
           id="project"
-          className="project text-[28px] md:text-[48px] lg:text-[58px] xl:text-[64px] text-center font-crimson"
+          className="project text-[#3A3A3A] text-[28px] md:text-[48px] lg:text-[58px] xl:text-[64px] text-center font-crimson"
         >
           My Creative{" "}
           <span className="bg-[#FFA585]/50 text-[#FFA585] border border-[#FFA585] p-2 font-shantell rounded-lg relative overflow-hidden">
@@ -187,6 +142,6 @@ export default function MyProjects() {
         height={380}
         className="hidden xl:blockabsolute bottom-[20%] right-[-20%] z-0"
       />
-    </section>
+    </motion.section>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import Navbar from "./components/navbar";
-import Profile from "./section/profile";
+import Profile from "./section/heroSection";
 import Stack from "./section/stack";
 import MyExperiences from "./section/myExperiences";
 import MyProjects from "./section/myProjects";
@@ -12,7 +12,7 @@ export default function Home() {
   const homeRef = useRef<HTMLElement | null>(null);
   const servicesRef = useRef<HTMLElement | null>(null);
   const experiencesRef = useRef<HTMLElement | null>(null);
-  const projectsRef = useRef<HTMLElement | null>(null);
+  const heroSectionRef = useRef<HTMLElement | null>(null);
 
   const sections = [
     { label: "Home", icon: "/home.svg", alt: "Home", ref: homeRef },
@@ -24,10 +24,10 @@ export default function Home() {
       ref: experiencesRef,
     },
     {
-      label: "Projects",
+      label: "HeroSection",
       icon: "/folder.svg",
-      alt: "Projects",
-      ref: projectsRef,
+      alt: "HeroSection",
+      ref: heroSectionRef,
     },
   ];
   return (
@@ -44,7 +44,7 @@ export default function Home() {
         <section ref={experiencesRef}>
           <MyExperiences />
         </section>
-        <section ref={projectsRef}>
+        <section ref={heroSectionRef}>
           <MyProjects />
         </section>
         <Footer />
