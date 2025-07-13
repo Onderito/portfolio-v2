@@ -2,15 +2,17 @@
 
 import React from "react";
 import Image from "next/image";
-// import Image from "next/image";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
-
-gsap.registerPlugin(ScrollTrigger);
+import { motion } from "framer-motion";
 
 export default function Services() {
   return (
-    <section className="flex flex-col justify-center items-center p-4 mt-10 md:p-12 lg:p-16 xl:px-40">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: true, amount: 0.5 }}
+      className="flex flex-col justify-center items-center p-4 mt-10 md:p-12 lg:p-16 xl:px-40"
+    >
       <span className="text-[#3A3A3A] font-shantell bg-white shadow-xs shadow-orange-300 p-1 px-3 rounded-full">
         services
       </span>
@@ -25,7 +27,13 @@ export default function Services() {
         <br className="hidden lg:inline" />— powered by Next.js, Tailwind & GSAP
       </p>
       <div className="lg:flex lg:gap-10 xl:gap-20 xl:mt-8">
-        <div className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 pb-8 w-full">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 pb-8 w-full"
+        >
           <div className="h-48 bg-[#FBFBFB] rounded-lg overflow-hidden">
             <Image
               className="w-full h-full object-cover rounded-lg"
@@ -41,9 +49,15 @@ export default function Services() {
           <p className="text-[#999999] mt-1">
             Crafted to convert — fast, clean & responsive.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 pb-8 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 pb-8 w-full"
+        >
           <div className="h-48 bg-[#FBFBFB] rounded-lg little-shadow ">
             <Image
               className="w-full"
@@ -57,9 +71,15 @@ export default function Services() {
             Next Js Development
           </h3>
           <p className="text-[#999999] mt-1">Fully powered by Next.js.</p>
-        </div>
+        </motion.div>
 
-        <div className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 pb-8 w-full">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 pb-8 w-full"
+        >
           <div className="h-48 bg-[#FBFBFB] rounded-lg flex justify-center items-center little-shadow relative">
             <Image
               className="absolute top-4 rotate-170 right-0"
@@ -85,8 +105,8 @@ export default function Services() {
           <p className="text-[#999999] mt-1">
             Your product — deployed, optimised & live.
           </p>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
