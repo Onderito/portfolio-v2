@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
-import { gsap } from "gsap";
+import { easeInOut, motion } from "motion/react";
 
 interface Section {
   label: string;
@@ -16,23 +16,6 @@ interface NavbarProps {
 }
 
 export default function Navbar({ sections }: NavbarProps) {
-  const navbarRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const nav = navbarRef.current;
-    gsap.from(nav, {
-      opacity: 0,
-      x: 400,
-      duration: 1.9,
-      ease: "power4.out",
-      onStart: () => {
-        nav!.style.willChange = "transform, opacity";
-      },
-      onComplete: () => {
-        nav!.style.willChange = "auto";
-      },
-    });
-  }, []);
   const handleClick = (sectionRef: React.RefObject<HTMLElement | null>) => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -60,8 +43,13 @@ export default function Navbar({ sections }: NavbarProps) {
       </div>
 
       <div className="hidden lg:block z-70 ">
-        <nav
-          ref={navbarRef}
+        <motion.nav
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            ease: easeInOut,
+          }}
           className="font-crimson border-[#DDDDDD] border p-5 xl:p-6 rounded-2xl fixed left-1/2 -translate-x-1/2 top-0 mt-4 z-80 backdrop-blur-md bg-white/70"
         >
           <ul className="flex items-center text-2xl xl:text-3xl divide-x divide-[#DDDDDD]">
@@ -80,7 +68,7 @@ export default function Navbar({ sections }: NavbarProps) {
               </li>
             ))}
           </ul>
-        </nav>
+        </motion.nav>
       </div>
     </div>
   );
