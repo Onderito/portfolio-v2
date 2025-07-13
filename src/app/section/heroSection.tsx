@@ -62,8 +62,8 @@ export default function HeroSection() {
           <div>
             <h2 className="font-crimson text-[#3A3A3A] text-[27px] md:text-[44px] lg:text[56px] xl:text-[64px]">
               Developer Fullstack &{" "}
-              <span className="relative text-[#b4b4b4] bg-white font-shantell shadow-sm p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-lg">
-                ux/ui
+              <span className="relative backdrop-blur-md bg-white/70 border-[#DDDDDD] border font-crimson p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-xl">
+                Ux/Ui
                 <motion.img
                   initial={{ opacity: 0, y: -90, rotate: -45, scale: 0.8 }}
                   animate={{ opacity: 1, y: 0, rotate: 0, scale: 1 }}
@@ -72,7 +72,7 @@ export default function HeroSection() {
                     delay: 0.9,
                     ease: [0.25, 1, 0.5, 1],
                   }}
-                  className=" w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] xl:w-[60px] xl:h-[60px] absolute top-[-46%] right-[-28%]"
+                  className=" w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] xl:w-[60px] xl:h-[60px] absolute top-[-52%] right-[-28%]"
                   src={"/pin.svg"}
                   alt="Pin icon"
                   width={0}
