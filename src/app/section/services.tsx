@@ -22,7 +22,7 @@ export default function Services() {
       >
         From Concept to Live Product
       </h2>
-      <p className="text-center text-[#3A3A3A] font-crimson mt-2 lg:mt-4 xl:mt-6 lg:text-[24px]">
+      <p className="text-center text-[#3A3A3A] font-crimson  lg:mt-4 xl:mt-6 lg:text-[24px]">
         Bringing your vision to life with a seamless mix of design and
         <br className="hidden lg:inline" />— powered by Next.js, Tailwind & GSAP
       </p>
@@ -46,7 +46,7 @@ export default function Services() {
           <h3 className="text-[#3A3A3A] font-crimson font-semibold text-[20px] mt-4">
             Landing Page Design
           </h3>
-          <p className="text-[#999999] mt-1">
+          <p className="text-[#999999]">
             Crafted to convert — fast, clean & responsive.
           </p>
         </motion.div>

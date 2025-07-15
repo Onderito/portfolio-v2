@@ -134,7 +134,7 @@ export default function MyProjects() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={{ once: true, amount: 0.2 }}
         className="project-card relative block xl:hidden"
       >
         {projects.map((project, index) => (
