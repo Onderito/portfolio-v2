@@ -34,15 +34,13 @@ export default function MyProjects() {
   ];
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-      viewport={{ once: true, amount: 0.5 }}
-      className="mt-10 p-4 md:p-12 lg:p-16 xl:px-60 relative overflow-hidden"
-    >
+    <section className="mt-10 p-4 md:p-12 lg:p-16 xl:px-60 relative overflow-hidden">
       <div className="flex justify-center items-center relative">
-        <h2
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.5 }}
           id="project"
           className="project text-[#3A3A3A] text-[28px] md:text-[48px] lg:text-[58px] xl:text-[64px] text-center font-crimson"
         >
@@ -50,11 +48,17 @@ export default function MyProjects() {
           <span className="bg-[#FFA585]/50 text-[#FFA585] border border-[#FFA585] p-2 font-shantell rounded-lg relative overflow-hidden">
             Journey
           </span>
-        </h2>
+        </motion.h2>
       </div>
 
       {/* Version Carousel visible en xl */}
-      <div className="project-card hidden xl:block mt-8 md:mt-12 xl:mt-10">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.4 }}
+        className="project-card hidden xl:block mt-8 md:mt-12 xl:mt-10"
+      >
         <button
           disabled={isBeginning}
           className="my-prev-button absolute left-40 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-white shadow-md text-black rounded-xl font-shantell cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-300  "
@@ -111,10 +115,16 @@ export default function MyProjects() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
 
       {/* Version en liste visible jusqu’à lg */}
-      <div className="project-card relative block xl:hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.4 }}
+        className="project-card relative block xl:hidden"
+      >
         {projects.map((project, index) => (
           <div
             key={index}
@@ -136,7 +146,7 @@ export default function MyProjects() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
       <Image
         src="/eclipse.png"
         alt="Eclipse background"
@@ -144,6 +154,6 @@ export default function MyProjects() {
         height={380}
         className="hidden xl:blockabsolute bottom-[20%] right-[-20%] z-0"
       />
-    </motion.section>
+    </section>
   );
 }

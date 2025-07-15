@@ -93,7 +93,7 @@ export default function MyExperiences() {
                 {" "}
                 {exp.company}
                 <motion.img
-                  initial={{ opacity: 0, x: 90, rotate: -45, scale: 0.8 }}
+                  initial={{ opacity: 0, x: 40, rotate: -45, scale: 0.8 }}
                   whileInView={{ opacity: 0.5, x: 0, rotate: 0, scale: 1 }}
                   transition={{
                     duration: 1.5,
