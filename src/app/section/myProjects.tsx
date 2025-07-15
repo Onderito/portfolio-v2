@@ -14,6 +14,18 @@ export default function MyProjects() {
   const [isEnd, setIsEnd] = React.useState(false);
   const projects = [
     {
+      name: "ClubHive",
+      image: "/club-hive.svg",
+      text: "Showcase website built with Next.js to present the ClubHive platform. I focused on responsive design, section layout, and optimized display across all screen sizes.",
+      url: "https://club-hive-rosy.vercel.app/",
+    },
+    {
+      name: "To Do App",
+      image: "/to-do-app.svg",
+      text: "To-do list app built with Next.js. Users can add and delete tasks with smooth animations using Framer Motion. Simple and responsive interface.",
+      url: "https://to-do-app-nextjs-chi.vercel.app/",
+    },
+    {
       name: "Tripgather",
       image: "/tripgather-img.svg",
       text: "A complete travel planning platform where I led the frontend development with Angular and handled backend integration using Spring Boot. I focused on building reusable components, smooth user experience, and responsive layouts. The app allows users to collaboratively organize trips and share itineraries in real-time.",
@@ -57,7 +69,7 @@ export default function MyProjects() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true, amount: 0.4 }}
-        className="project-card hidden xl:block mt-8 md:mt-12 xl:mt-10"
+        className="project-card hidden xl:block mt-8 md:mt-12 xl:mt-10 "
       >
         <button
           disabled={isBeginning}
@@ -102,7 +114,7 @@ export default function MyProjects() {
                   <h3 className="font-crimson text-[#3A3A3A text-[35px]">
                     {project.name}
                   </h3>
-                  <p className="text-[#999999] font-crimson text-[18px] mt-1">
+                  <p className="text-[#999999] font-crimson font-regular text-[18px]">
                     {project.text}
                   </p>
                   <button className="py-3 bg-[#323232] font-crimson text-[20px] rounded-lg text-white px-6 mb-4 mt-6 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">
