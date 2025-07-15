@@ -25,7 +25,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0, scale: 1, rotate: 0 }}
           transition={{
             duration: 1.1,
-            ease: [0.25, 0.5, 0.5, 1], // power4.out
+            ease: [0.25, 0.5, 0.5, 1],
           }}
           src="/eclipse.svg"
           alt="Eclipse background"
@@ -38,7 +38,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0, scale: 1, rotate: 0 }}
           transition={{
             duration: 1.1,
-            ease: [0.25, 1, 0.5, 1], // power4.out
+            ease: [0.25, 1, 0.5, 1],
           }}
           src="/profile.webp"
           alt="Profile picture"
@@ -56,32 +56,29 @@ export default function HeroSection() {
             ease: [0.25, 1, 0.8, 1],
           }}
         >
-          <h1 className="font-crimson text-[#3A3A3A] text-[40px] mt-4 xl:mt-6 md:text-[60px] lg:text-[68px] xl-text[84px] lg:leading-28 xl:leading-14">
-            Hey, I&apos;m Ulas Önder.
+          <h1 className="font-crimson text-[#3A3A3A] text-[40px] mt-4 xl:mt-6 md:text-[60px] lg:text-[68px] xl-text[84px] md:leading-16 lg:leading-18 xl:leading-18 xl:tracking-normal">
+            Hey, I&apos;m Ulas Önder. <br className="" />
+            Developer Fullstack & {""}
+            <span className="relative backdrop-blur-md bg-white/70 border-[#DDDDDD] border font-crimson p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-xl">
+              Ux/Ui
+              <motion.img
+                initial={{ opacity: 0, y: -90, rotate: -45, scale: 0.8 }}
+                animate={{ opacity: 1, y: 0, rotate: 0, scale: 1 }}
+                transition={{
+                  duration: 2,
+                  delay: 0.9,
+                  ease: [0.25, 1, 0.5, 1],
+                }}
+                className=" w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] xl:w-[60px] xl:h-[60px] absolute top-[-52%] right-[-28%]"
+                src={"/pin.svg"}
+                alt="Pin icon"
+                width={0}
+                height={0}
+              />
+            </span>{" "}
+            designer.
           </h1>
-          <div>
-            <h2 className="font-crimson text-[#3A3A3A] text-[27px] md:text-[44px] lg:text[56px] xl:text-[64px]">
-              Developer Fullstack &{" "}
-              <span className="relative backdrop-blur-md bg-white/70 border-[#DDDDDD] border font-crimson p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-xl">
-                Ux/Ui
-                <motion.img
-                  initial={{ opacity: 0, y: -90, rotate: -45, scale: 0.8 }}
-                  animate={{ opacity: 1, y: 0, rotate: 0, scale: 1 }}
-                  transition={{
-                    duration: 2,
-                    delay: 0.9,
-                    ease: [0.25, 1, 0.5, 1],
-                  }}
-                  className=" w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] xl:w-[60px] xl:h-[60px] absolute top-[-52%] right-[-28%]"
-                  src={"/pin.svg"}
-                  alt="Pin icon"
-                  width={0}
-                  height={0}
-                />
-              </span>{" "}
-              designer.
-            </h2>
-          </div>
+
           <p className="text-[16px] font-crimson mt-2 lg:mt-4 xl:mt-4 text-neutral-700 max-w-md md:max-w-2xl xl:max-w-3xl md:text-[24px] lg:text-[28px]">
             I code like a dev and think like a designer. Always curious, always
             building.
