@@ -117,7 +117,7 @@ export default function MyProjects() {
                   <p className="text-[#999999] font-crimson font-regular text-[18px]">
                     {project.text}
                   </p>
-                  <button className="py-3 bg-[#323232] font-crimson text-[20px] rounded-lg text-white px-6 mb-4 mt-6 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">
+                  <button className="py-3 bg-[#323232] font-crimson font-bold tracking-[-2%] text-[16px] rounded-lg text-white px-6 mb-4 mt-6 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">
                     <a target="_blank" href={project.url}>
                       See my project
                     </a>

@@ -22,7 +22,7 @@ export default function Services() {
       >
         From Concept to Live Product
       </h2>
-      <p className="text-center text-[#3A3A3A] font-crimson  lg:mt-4 xl:mt-6 lg:text-[24px]">
+      <p className="text-center text-[#3A3A3A] font-crimson lg:mt-4 xl:mt-6 lg:text-[24px]">
         Bringing your vision to life with a seamless mix of design and
         <br className="hidden lg:inline" />— powered by Next.js, Tailwind & GSAP
       </p>
@@ -32,7 +32,7 @@ export default function Services() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.4 }}
-          className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 pb-8 w-full"
+          className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 w-full"
         >
           <div className="h-48 bg-[#FBFBFB] rounded-lg overflow-hidden">
             <Image
@@ -56,7 +56,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.4 }}
-          className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 pb-8 w-full"
+          className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 w-full"
         >
           <div className="h-48 bg-[#FBFBFB] rounded-lg little-shadow ">
             <Image
@@ -78,7 +78,7 @@ export default function Services() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.4 }}
-          className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 pb-8 w-full"
+          className="border-1 border-[#FBFBFB] card-shadow mt-8 bg-white rounded-lg p-2 w-full"
         >
           <div className="h-48 bg-[#FBFBFB] rounded-lg flex justify-center items-center little-shadow relative">
             <Image

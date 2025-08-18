@@ -56,9 +56,9 @@ export default function HeroSection() {
             ease: [0.25, 1, 0.8, 1],
           }}
         >
-          <h1 className="font-crimson text-[#3A3A3A] text-[40px] mt-4 xl:mt-6 md:text-[60px] lg:text-[68px] xl-text[84px] md:leading-16 lg:leading-18 xl:leading-18 xl:tracking-normal">
+          <h1 className="font-crimson text-[#3A3A3A] text-[40px] mt-4 xl:mt-6 md:text-[60px] lg:text-[68px] xl-text[80px] md:leading-16 lg:leading-18 xl:leading-18 xl:tracking-normal">
             Hey, I&apos;m Ulas Önder. <br className="" />
-            Developer Fullstack & {""}
+            Developer Front-end & {""}
             <span className="relative backdrop-blur-md bg-white/70 border-[#DDDDDD] border font-crimson p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-xl">
               Ux/Ui
               <motion.img
@@ -92,7 +92,7 @@ export default function HeroSection() {
               ease: easeOut,
             }}
             // ref={buttonRef}
-            className="mt-6 lg:mt-8 xl:mt-8 font-crimson text-[22px] lg:text-[28px] flex gap-3"
+            className="mt-6 lg:mt-8 xl:mt-8 font-crimson font-bold text-[16px] flex gap-3 tracking-[-2%]"
           >
             <motion.button
               whileHover={{
