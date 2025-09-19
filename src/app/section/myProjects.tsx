@@ -13,41 +13,35 @@ export default function MyProjects() {
   const [isBeginning, setIsBeginning] = React.useState(true);
   const [isEnd, setIsEnd] = React.useState(false);
   const projects = [
-    // {
-    //   name: "VipLimoNice",
-    //   image: "/vip-limo-nice.svg",
-    //   text: "",
-    //   url: "",
-    // },
+    {
+      name: "Vip limo Nice",
+      image: "/vip-limo-nice.webp",
+      text: "Built with Next.js to present the VipLimoNice platform. I worked on a full multi-page website with responsive design, clear section layouts, and an online booking feature, ensuring an optimized display across all screen sizes.",
+      url: "https://koko-services.vercel.app/",
+    },
     {
       name: "ClubHive",
-      image: "/club-hive.svg",
+      image: "/club-hive.webp",
       text: "Showcase website built with Next.js to present the ClubHive platform. I focused on responsive design, section layout, and optimized display across all screen sizes.",
       url: "https://club-hive-rosy.vercel.app/",
     },
     {
       name: "To Do App",
-      image: "/to-do-app.svg",
+      image: "/to-do-app.webp",
       text: "To-do list app built with Next.js. Users can add and delete tasks with smooth animations using Framer Motion. Simple and responsive interface.",
       url: "https://to-do-app-nextjs-chi.vercel.app/",
     },
     {
-      name: "Tripgather",
-      image: "/tripgather-img.svg",
-      text: "A complete travel planning platform where I led the frontend development with Angular and handled backend integration using Spring Boot. I focused on building reusable components, smooth user experience, and responsive layouts. The app allows users to collaboratively organize trips and share itineraries in real-time.",
-      url: "https://tripgather.wcs-students.fr/home",
-    },
-    {
       name: "Sealocker app",
-      image: "/sealocker-img.svg",
+      image: "/sealocker.webp",
       text: "A marketing website for a startup that provides smart lockers for water sports. I designed and developed the site in Webflow, using CMS collections for scalable content. I also integrated custom GSAP animations for smooth transitions, enhancing the premium feel of the brand.",
       url: "https://www.sealocker.fr/",
     },
     {
-      name: "Pokedex",
-      image: "/pokedex-img.svg",
-      text: "A Pokedex app built with Angular, utilizing the PokeAPI to fetch and display Pokemon data. I implemented features like search, filtering, and pagination, focusing on performance and user experience. The app showcases my skills in frontend development and API integration.",
-      url: "https://pokemon-app-ang.vercel.app/",
+      name: "Calmly",
+      image: "/calmly.webp",
+      text: "Landing page built with a clean and minimal design to promote Calmly, a mindfulness tool. Focus on simplicity, responsive design, and clear calls-to-action for an engaging user experience.",
+      url: "https://calmy.vercel.app/",
     },
   ];
 
@@ -108,15 +102,15 @@ export default function MyProjects() {
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
-              <div className="border border-[#EBEBEB] rounded-xl mt-6">
+              <div className="border border-[#EBEBEB] rounded-2xl mt-6">
                 <Image
                   src={project.image}
                   alt={project.name}
                   width={1000}
                   height={500}
-                  className="w-full h-auto py-4 px-4"
+                  className="w-full rounded-t-xl h-auto"
                 />
-                <div className="px-4">
+                <div className="px-4 py-4">
                   <h3 className="font-fredoka text-[#404040] heading-3">
                     {project.name}
                   </h3>
@@ -153,7 +147,7 @@ export default function MyProjects() {
               alt={project.name}
               width={1000}
               height={500}
-              className="w-full h-auto py-4 px-4"
+              className="w-full rounded-xl h-auto py-4 px-4"
             />
             <div className="px-4">
               <h3 className="font-fredoka heading-3">{project.name}</h3>
@@ -165,13 +159,13 @@ export default function MyProjects() {
           </div>
         ))}
       </motion.div>
-      <Image
+      {/* <Image
         src="/eclipse.png"
         alt="Eclipse background"
         width={566}
         height={380}
-        className="hidden xl:blockabsolute bottom-[20%] right-[-20%] z-0"
-      />
+        className="hidden xl:block absolute bottom-[20%] right-[-20%] z-0"
+      /> */}
     </section>
   );
 }
