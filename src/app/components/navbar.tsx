@@ -50,7 +50,7 @@ export default function Navbar({ sections }: NavbarProps) {
             duration: 0.8,
             ease: easeInOut,
           }}
-          className="font-crimson border-[#DDDDDD] border p-5 xl:p-6 rounded-2xl fixed left-1/2 -translate-x-1/2 top-0 mt-4 z-80 backdrop-blur-md bg-white/70"
+          className="font-fredoka border-[#DDDDDD] border p-5 xl:p-6 rounded-2xl fixed left-1/2 -translate-x-1/2 top-0 mt-4 z-80 backdrop-blur-md bg-white/70"
         >
           <ul className="flex items-center text-2xl xl:text-3xl divide-x divide-[#DDDDDD]">
             {sections.map((section) => (

@@ -13,6 +13,12 @@ export default function MyProjects() {
   const [isBeginning, setIsBeginning] = React.useState(true);
   const [isEnd, setIsEnd] = React.useState(false);
   const projects = [
+    // {
+    //   name: "VipLimoNice",
+    //   image: "/vip-limo-nice.svg",
+    //   text: "",
+    //   url: "",
+    // },
     {
       name: "ClubHive",
       image: "/club-hive.svg",
@@ -54,7 +60,7 @@ export default function MyProjects() {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.5 }}
           id="project"
-          className="project text-[#3A3A3A] text-[28px] md:text-[48px] lg:text-[58px] xl:text-[64px] text-center font-crimson"
+          className="project text-[#404040] heading-2 text-center font-fredoka"
         >
           My Creative{" "}
           <span className="bg-[#FFA585]/50 text-[#FFA585] border border-[#FFA585] p-2 font-shantell rounded-lg relative overflow-hidden">
@@ -111,13 +117,13 @@ export default function MyProjects() {
                   className="w-full h-auto py-4 px-4"
                 />
                 <div className="px-4">
-                  <h3 className="font-crimson text-[#3A3A3A text-[35px]">
+                  <h3 className="font-fredoka text-[#404040] heading-3">
                     {project.name}
                   </h3>
-                  <p className="text-[#999999] font-crimson font-regular text-[18px]">
+                  <p className="text-[#999999] font-fredoka card-text">
                     {project.text}
                   </p>
-                  <button className="py-3 bg-[#323232] font-crimson font-bold tracking-[-2%] text-[16px] rounded-lg text-white px-6 mb-4 mt-6 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">
+                  <button className="py-3 bg-[#323232] font-fredoka tracking-[-2%] text-[16px] rounded-lg text-white px-6 mb-4 mt-6 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">
                     <a target="_blank" href={project.url}>
                       See my project
                     </a>
@@ -150,9 +156,9 @@ export default function MyProjects() {
               className="w-full h-auto py-4 px-4"
             />
             <div className="px-4">
-              <h3 className="font-shantell text-[24px]">{project.name}</h3>
-              <p className="text-[#6B6B6B] text-[14px] mt-1 ">{project.text}</p>
-              <button className="py-3 bg-[#323232] font-crimson text-[16px] rounded-lg text-white px-6 mb-4 mt-4 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">
+              <h3 className="font-fredoka heading-3">{project.name}</h3>
+              <p className="text-[#6B6B6B] card-text mt-1 ">{project.text}</p>
+              <button className="py-3 bg-[#323232] font-fredoka text-[16px] rounded-lg text-white px-6 mb-4 mt-4 shadow-orange hover:shadow-none transition-all duration-600 cursor-pointer">
                 <a href={project.url}>See my project</a>
               </button>
             </div>

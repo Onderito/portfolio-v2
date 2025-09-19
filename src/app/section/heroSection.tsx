@@ -5,7 +5,7 @@ import { easeInOut, easeOut, motion } from "motion/react";
 export default function HeroSection() {
   return (
     <div className="relative overflow-x-hidden">
-      <motion.img
+      {/* <motion.img
         initial={{ opacity: 0, scale: 0.8, rotate: -25 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
         transition={{
@@ -18,7 +18,7 @@ export default function HeroSection() {
         width={0}
         height={0}
         className=" w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[550px] lg:h-[550px] xl:w-[600px] xl:h-[600px] absolute right-[-20%] xl:right-[-5%] xl:top-[19%] top-0 md:top-[-10%] lg:top-30 lg:right-[-30%] rounded-full xl:rounded-none "
-      />
+      /> */}
       <section className="p-4 pt-20 md:p-12 lg:p-16 xl:p-40 ">
         <motion.img
           initial={{ opacity: 0, x: 400, scale: 0.8, rotate: -25 }}
@@ -56,10 +56,10 @@ export default function HeroSection() {
             ease: [0.25, 1, 0.8, 1],
           }}
         >
-          <h1 className="font-crimson text-[#3A3A3A] text-[40px] mt-4 xl:mt-6 md:text-[60px] lg:text-[68px] xl-text[80px] md:leading-16 lg:leading-18 xl:leading-18 xl:tracking-normal">
+          <h1 className="font-crimson text-[#404040] heading-1 mt-4 xl:mt-6">
             Hey, I&apos;m Ulas Önder. <br className="" />
             Developer Front-end & {""}
-            <span className="relative backdrop-blur-md bg-white/70 border-[#DDDDDD] border font-crimson p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-xl">
+            <span className="relative backdrop-blur-md bg-white/70 border-[#DDDDDD] border font-fredoka p-2 text-[30px] lg:text-[40px] xl:text-[50px] rounded-xl">
               Ux/Ui
               <motion.img
                 initial={{ opacity: 0, y: -90, rotate: -45, scale: 0.8 }}
@@ -79,7 +79,7 @@ export default function HeroSection() {
             designer.
           </h1>
 
-          <p className="text-[16px] font-crimson mt-2 lg:mt-4 xl:mt-4 text-neutral-700 max-w-md md:max-w-2xl xl:max-w-3xl md:text-[24px] lg:text-[28px]">
+          <p className="font-fredoka mt-2 lg:mt-4 xl:mt-4 text-neutral-700 body-text font-light">
             I code like a dev and think like a designer. Always curious, always
             building.
           </p>
@@ -92,7 +92,7 @@ export default function HeroSection() {
               ease: easeOut,
             }}
             // ref={buttonRef}
-            className="mt-6 lg:mt-8 xl:mt-8 font-crimson font-bold text-[16px] flex gap-3 tracking-[-2%]"
+            className="mt-6 lg:mt-8 xl:mt-8 font-fredoka font-bold text-[16px] flex gap-3 tracking-[-2%]"
           >
             <motion.button
               whileHover={{
@@ -100,7 +100,7 @@ export default function HeroSection() {
                 transition: { duration: 0.5, ease: easeInOut },
               }}
               whileTap={{ scale: 0.95, rotate: "2.5deg" }}
-              className="text-white shadow-md inset-shadow-md bg-[#2F2F2F] rounded-lg p-3 md:p-4 xl:px-6 cursor-pointer"
+              className="text-white shadow-md inset-shadow-md bg-[#404040] font-normal rounded-lg p-3 md:p-4 xl:px-6 cursor-pointer"
             >
               <a target="_blank" href="https://github.com/Onderito">
                 See my projects
@@ -112,7 +112,7 @@ export default function HeroSection() {
                 transition: { duration: 0.5, ease: easeInOut },
               }}
               whileTap={{ scale: 0.95, rotate: "2.5deg" }}
-              className="text-[#0B66C2] shadow-xs inset-shadow-lg bg-[#0B66C2]/20 rounded-full p-3 md:p-4 xl:py-1 xl:px-8 cursor-pointer"
+              className="text-[#0B66C2] shadow-xs inset-shadow-lg bg-[#0B66C2]/20 font-normal rounded-full p-3 md:p-4 xl:py-1 xl:px-8 cursor-pointer"
             >
               <a target="_blank" href="https://www.linkedin.com/in/ulasonder/">
                 Linkedin

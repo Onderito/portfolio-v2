@@ -19,7 +19,7 @@ export default function Footer() {
           />
         </h2>
 
-        <p className="relative text-center mt-2 lg:mt-6 font-crimson text-base md:text-2xl lg:text-4xl  ">
+        <p className="relative text-center mt-2 lg:mt-6 font-fredoka text-base md:text-2xl lg:text-4xl  ">
           Excited to collaborate together.
           <Image
             className="absolute left-20 md:left-45 xl:left-[32%] w-[100px] md:w-[200px] lg:w-[300px] "

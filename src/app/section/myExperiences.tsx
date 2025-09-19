@@ -45,7 +45,7 @@ export default function MyExperiences() {
         transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true, amount: 0.4 }}
         id="myExperiences"
-        className="my-experiences text-[32px] text-[#3A3A3A] md:text-[48px] lg:text-[58px] xl:text-[64px] font-crimson"
+        className="my-experiences heading-2 text-[#404040] font-fredoka"
       >
         My experiences
       </motion.h2>
@@ -54,16 +54,15 @@ export default function MyExperiences() {
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
-            className={`flex flex-col-reverse xl:flex xl:flex-row xl:items-center xl:gap-20 ${
-              index === 1 ? "border-y border-[#cecece]/40 py-6" : ""
-            }`}
+            className={`flex flex-col-reverse xl:flex xl:flex-row xl:items-center xl:gap-20 ${index === 1 ? "border-y border-[#cecece]/40 py-6" : ""
+              }`}
           >
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.4 }}
-              className="date text-[#cecece] text-[20px] md:text-[25px] lg:text-[30px] font-crimson italic"
+              className="date text-[#cecece] text-[20px] md:text-[25px] lg:text-[30px] font-fredoka font-light italic"
             >
               {exp.date}
             </motion.p>
@@ -72,7 +71,7 @@ export default function MyExperiences() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.4 }}
-              className="title text-[#3A3A3A] text-[24px] md:text-[35px] lg:text-[40px] font-fredoka font-light"
+              className="title text-[#404040] text-[24px] md:text-[35px] lg:text-[40px] font-fredoka font-light "
             >
               {exp.title} at{" "}
               <motion.a
@@ -83,7 +82,7 @@ export default function MyExperiences() {
                 viewport={{ once: true, amount: 0.4 }}
                 rel="noopener noreferrer"
                 target="_blank"
-                className={`company relative font-shantell font-semibold cursor-pointer rounded-xl p-1 px-2 md:px-4 md:p-0 text-[18px] md:text-[35px] lg:text-[40] inline-block border-[0.4px] ${exp.bgClass} ${exp.textClass}`}
+                className={`company relative font-fredoka font-semibold cursor-pointer rounded-xl p-1 px-2 md:px-4 md:p-0 text-[18px] md:text-[35px] lg:text-[40] inline-block border-[0.4px] ${exp.bgClass} ${exp.textClass}`}
                 href={exp.url}
               >
                 {" "}
